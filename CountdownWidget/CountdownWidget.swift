@@ -37,26 +37,15 @@ struct Provider: TimelineProvider {
 struct SimpleEntry: TimelineEntry {
     let date: Date
 }
-func difference() -> Double{
-    let fmt = ISO8601DateFormatter()
-    fmt.timeZone = TimeZone.current
-    let target = fmt.date(from: "2021-05-29T14:00:00+0800")!
-    let today = Date()
-    var outs :Double
-    let days = Double(Calendar.current.dateComponents([.day ,.hour], from: today, to: target).day ?? 0)
-    if days < 7.0 {
-        let hour = Double(Calendar.current.dateComponents([.day ,.hour], from: today, to: target).hour ?? 0)
-        outs = Double(days) + Double(Int(hour / 24 * 10) / 10)
-    } else {
-        outs = days
-    }
-//    print ("\(fmt.string(from: today))")
-//    print (outs)
-    return outs
-}
+
 struct CountdownWidgetEntryView : View {
     var entry: Provider.Entry
     @Environment(\.widgetFamily) var widgetFamily
+    var targetDate: Date{
+        let fmt = ISO8601DateFormatter()
+        fmt.timeZone = TimeZone.current
+        return fmt.date(from: "2021-05-29T14:00:00+0800")!
+    }
     var body: some View {
 //        Text(entry.date, style: .time)
         ZStack{
@@ -68,10 +57,10 @@ struct CountdownWidgetEntryView : View {
                     .font(.headline)
                     .padding()
                 HStack(alignment:.bottom){
-                    Text("\(difference(),specifier: "%.1f")")
+                    Text("\(difference(targetDate: targetDate).value, specifier: "%0.0f")")
                         .font(widgetFamily == .systemSmall ? .system(size: 60) : .system(size: 80))
                         .fontWeight(.bold)
-                    Text("Days")
+                    Text( "\(difference(targetDate: targetDate).unit)")
                         .font(.caption)
                 }
             } //:VStack

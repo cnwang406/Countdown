@@ -16,6 +16,9 @@
 		27BD80A7263B05EE009A8DA9 /* CountdownWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BD80A6263B05EE009A8DA9 /* CountdownWidget.swift */; };
 		27BD80A9263B05F1009A8DA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27BD80A8263B05F1009A8DA9 /* Assets.xcassets */; };
 		27BD80AD263B05F1009A8DA9 /* CountdownWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 27BD809F263B05ED009A8DA9 /* CountdownWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		27C901DB263B6A6400BB8BAA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BD808D263AF903009A8DA9 /* ContentView.swift */; };
+		27C901DC263B701A00BB8BAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27BD808F263AF905009A8DA9 /* Assets.xcassets */; };
+		27C901DD263B709900BB8BAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27BD80A8263B05F1009A8DA9 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -216,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27BD8093263AF905009A8DA9 /* Preview Assets.xcassets in Resources */,
+				27C901DD263B709900BB8BAA /* Assets.xcassets in Resources */,
 				27BD8090263AF905009A8DA9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -224,6 +228,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27C901DC263B701A00BB8BAA /* Assets.xcassets in Resources */,
 				27BD80A9263B05F1009A8DA9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,6 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27C901DB263B6A6400BB8BAA /* ContentView.swift in Sources */,
 				27BD80A7263B05EE009A8DA9 /* CountdownWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
