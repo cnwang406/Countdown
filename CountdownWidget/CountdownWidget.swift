@@ -41,29 +41,16 @@ struct SimpleEntry: TimelineEntry {
 struct CountdownWidgetEntryView : View {
     var entry: Provider.Entry
     @Environment(\.widgetFamily) var widgetFamily
-    var targetDate: Date{
-        let fmt = ISO8601DateFormatter()
-        fmt.timeZone = TimeZone.current
-        return fmt.date(from: "2021-05-29T14:00:00+0800")!
-    }
+    @StateObject var countdownVM = CountdownViewModel()
+
     var body: some View {
 //        Text(entry.date, style: .time)
         ZStack{
             Image("tesla")
                 .resizable()
                 .scaledToFit().opacity(0.3)
-            VStack{
-                Text("Model 3 is coming ")
-                    .font(.headline)
-                    .padding()
-                HStack(alignment:.bottom){
-                    Text("\(difference(targetDate: targetDate).value, specifier: "%0.0f")")
-                        .font(widgetFamily == .systemSmall ? .system(size: 60) : .system(size: 80))
-                        .fontWeight(.bold)
-                    Text( "\(difference(targetDate: targetDate).unit)")
-                        .font(.caption)
-                }
-            } //:VStack
+            CountdownProgressView()
+                .environmentObject(countdownVM)
             
         }
     }
@@ -83,14 +70,18 @@ struct CountdownWidget: Widget {
 }
 
 struct CountdownWidget_Previews: PreviewProvider {
+    @StateObject var countdownVM = CountdownViewModel()
     static var previews: some View {
         Group {
             CountdownWidgetEntryView(entry: SimpleEntry(date: Date()))
                 .previewContext(WidgetPreviewContext(family: .systemSmall))
-            CountdownWidgetEntryView(entry: SimpleEntry(date: Date()))
-                .previewContext(WidgetPreviewContext(family: .systemMedium))
-            CountdownWidgetEntryView(entry: SimpleEntry(date: Date()))
-                .previewContext(WidgetPreviewContext(family: .systemLarge))
+//                .environmentObject(countdownVM)
+//            CountdownWidgetEntryView(entry: SimpleEntry(date: Date()))
+//                .previewContext(WidgetPreviewContext(family: .systemMedium))
+////                .environmentObject(countdownVM)
+//            CountdownWidgetEntryView(entry: SimpleEntry(date: Date()))
+//                .previewContext(WidgetPreviewContext(family: .systemLarge))
+//                .environmentObject(countdownVM)
         }
     }
 }
