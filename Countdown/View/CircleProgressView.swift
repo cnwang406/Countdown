@@ -13,24 +13,27 @@ struct CircleProgressView: View {
     @State var current: Double
     //MARK: - BODY
     var body: some View {
-        ZStack{
-            Circle()
-                .stroke(lineWidth: 20.0)
-                .opacity(0.3)
-                .foregroundColor(.red)
-            Circle()
-                .trim(from: 0.0, to: CGFloat( current / total ))
-                .stroke(style: StrokeStyle(lineWidth: 20.0, lineCap: .round, lineJoin: .round))
-                .rotationEffect(Angle(degrees: 270.0))
-                .foregroundColor(.red)
-                .animation(.linear)
-            Text("\(current / total * 100, specifier: "%0.1f")%")
-                .font(.system(size:  40.0))
-                .fontWeight(.bold)
-                .opacity(0.6)
-            
+         GeometryReader{ geometry in
+            ZStack{
+                Circle()
+                    .stroke(lineWidth: 20.0)
+                    .opacity(0.3)
+                    .foregroundColor(.red)
+                Circle()
+                    .trim(from: 0.0, to: CGFloat( current / total ))
+                    .stroke(style: StrokeStyle(lineWidth: 20.0, lineCap: .round, lineJoin: .round))
+                    .rotationEffect(Angle(degrees: 270.0))
+                    .foregroundColor(.red)
+                    .animation(.linear)
+                Text("\(current / total * 100, specifier: "%0.1f")%")
+                    .font(.system(size:  40.0))
+                    .fontWeight(.bold)
+                    .opacity(0.6)
+                Text("w\(geometry.size.width) h\(geometry.size.height)")
+                
+            }
+            .frame(width: geometry.size.width,  height:100)
         }
-        .frame(width: 200, height:200)
     }
 }
 

@@ -25,7 +25,7 @@ struct LeftDaysView: View {
                 Text(unit)
                 .font(.system(size: 40))
             }
-        }.frame(width: 200, height: 200, alignment: .center)
+        }.frame(width: 100, height: 100, alignment: .center)
     }
 }
 

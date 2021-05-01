@@ -49,8 +49,9 @@ struct CountdownWidgetEntryView : View {
             Image("tesla")
                 .resizable()
                 .scaledToFit().opacity(0.3)
-            CountdownProgressView()
+            WidgetProgressView()
                 .environmentObject(countdownVM)
+//            ContentView()
             
         }
     }
