@@ -11,15 +11,9 @@ struct SetDateView: View {
     //MARK: - PROPERTIES
     @Environment(\.presentationMode) var presentationMode
     @StateObject var countdownVM: CountdownViewModel
-//    @State var std = UserDefaults.standard
-//    @State var dateFrom: Date = UserDefaults(suiteName: "group.com.cnwang")?.dateFrom ?? Date()
-//    @State var dateTo: Date = UserDefaults(suiteName: "group.com.cnwang")?.dateTo ?? Date()
-//    @State var dateFromEnabled: Bool = UserDefaults(suiteName: "group.com.cnwang")?.dateFromEnabled ?? false
-//    @State var dateToEnabled: Bool = UserDefaults(suiteName: "group.com.cnwang")?.dateToEnabled ?? true
-//    @State var title: String = UserDefaults(suiteName: "group.com.cnwang")?.title ?? "UNTITLED"
-//
+
     @State var message: String = "ERROR"
-    func save(){
+    func sav_e(){
         UserDefaults(suiteName: "group.com.cnwang")?.setValue(countdownVM.dateFrom, forKey: "dateFrom")
         UserDefaults(suiteName: "group.com.cnwang")?.setValue(countdownVM.dateTo, forKey: "dateTo")
         UserDefaults(suiteName: "group.com.cnwang")?.setValue(countdownVM.dateFromEnabled, forKey: "dateFromEnabled")
@@ -79,13 +73,7 @@ struct SetDateView: View {
                 Button(action: {
                     if countdownVM.dateFrom.fullDistance(from: countdownVM.dateTo, resultIn: .hour) ?? 0 > 0 {
                         message = ""
-//                        self.countdownVM.title = title
-//                        self.countdownVM.dateFrom = dateFrom
-//                        self.countdownVM.dateFromEnabled = dateFromEnabled
-//                        self.countdownVM.dateTo = dateTo
-//                        self.countdownVM.dateToEnabled = dateToEnabled
-                        
-                        self.save()
+                        countdownVM.save()
                         presentationMode.wrappedValue.dismiss()
                     } else {
                         message = "起始日 晚於 結束日期"

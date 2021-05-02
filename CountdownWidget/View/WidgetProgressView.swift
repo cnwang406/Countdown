@@ -19,7 +19,7 @@ struct WidgetProgressView: View {
                     //                Text("\(countdownVM.dateFromEnabled.description) \(countdownVM.dateToEnabled.description)")
                     WCircleProgressView(countdownVM : countdownVM)
                 }
-            } else if !countdownVM.dateToEnabled && countdownVM.dateToEnabled {
+            } else if !countdownVM.dateFromEnabled && countdownVM.dateToEnabled {
                 VStack{
                     //                Text("\(countdownVM.dateFromEnabled.description) \(countdownVM.dateToEnabled.description)")
                     WLeftDaysView(countdownVM : countdownVM)

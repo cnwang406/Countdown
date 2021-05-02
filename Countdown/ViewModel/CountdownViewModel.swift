@@ -16,10 +16,10 @@ class CountdownViewModel: ObservableObject{
     @Published var title: String
     
     var total: Double {
-        Double( Calendar.current.dateComponents([.day], from: dateFrom , to: dateTo ).day ?? 1)
+        Double( Calendar.current.dateComponents([.hour], from: dateFrom , to: dateTo ).hour ?? 1) / 24.0
     }
     var current: Double {
-        Double( Calendar.current.dateComponents([.day], from: dateFrom, to: today).day ?? 0)
+        Double( Calendar.current.dateComponents([.hour], from: dateFrom, to: today).hour ?? 0) / 24.0
     }
     var left: Double{
         total - current
@@ -38,44 +38,15 @@ class CountdownViewModel: ObservableObject{
         self.title = UserDefaults(suiteName: "group.com.cnwang")?.title ?? "UNTITLED"
         self.unit = "Days"
     }
-    var targetDate: Date{
-        let fmt = ISO8601DateFormatter()
-        fmt.timeZone = TimeZone.current
-        return fmt.date(from: "2021-05-29T14:00:00+0800")!
+    func save(){
+        UserDefaults(suiteName: "group.com.cnwang")?.setValue(self.dateFrom, forKey: "dateFrom")
+        UserDefaults(suiteName: "group.com.cnwang")?.setValue(self.dateTo, forKey: "dateTo")
+        UserDefaults(suiteName: "group.com.cnwang")?.setValue(self.dateFromEnabled, forKey: "dateFromEnabled")
+        UserDefaults(suiteName: "group.com.cnwang")?.setValue(self.dateToEnabled, forKey: "dateToEnabled")
+        UserDefaults(suiteName: "group.com.cnwang")?.setValue(self.title, forKey: "title")
+        
     }
     
-    
-//    func midWay() -> Double {
-//        let total = Double( Calendar.current.dateComponents([.minute], from: dateFrom ?? today, to: dateTo ?? today).minute ?? 1)
-////        print (total)
-//        let finished = Double( Calendar.current.dateComponents([.minute], from: dateFrom ?? today, to: today).minute ?? 0)
-//        print (" from \(String(describing: dateFrom.description)) to \(String(describing: dateTo.description)) = \(finished) / \(total)")
-//
-//        self.total = total
-//        self.current = finished
-//        return finished / total
-//    }
-//
-//    func left() -> (value: Double, unit: String) {
-//        var unit: String = ""
-//        var value: Double = 0
-//        print ("left : from \(dateFrom) -> \(dateTo)")
-//        let minLeft = Double( Calendar.current.dateComponents([.minute], from: dateFrom ?? today, to: dateTo ?? today).minute ?? 0)
-//
-//        if minLeft > 1440 * 2 { // > 2 day
-//            value = Double( Int(minLeft / 1440 * 10 ) / 10)
-//            unit = "Days"
-//        } else if minLeft > 60 { // hour
-//            value = Double( Int(minLeft / 60 * 10 ) / 10)
-//            unit = "Hour"
-//        } else {
-//            value = Double( Int(minLeft / 60 * 10 ) / 10)
-//            unit = "Minute"
-//        }
-//        print (" = \(value) \(unit)")
-//        self.left = value
-//        self.unit = unit
-//        return (value, unit)
-//    }
+
     
 }

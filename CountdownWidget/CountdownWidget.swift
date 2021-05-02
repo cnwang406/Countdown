@@ -65,8 +65,8 @@ struct CountdownWidget: Widget {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
             CountdownWidgetEntryView(entry: entry)
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName("Countdown Widget")
+        .description("Countdown Widget.")
     }
 }
 

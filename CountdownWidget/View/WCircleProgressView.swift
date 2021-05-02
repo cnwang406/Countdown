@@ -20,7 +20,7 @@ struct WCircleProgressView: View {
             ZStack{
                 
                 Text(countdownVM.title)
-                    .font(.title)
+                    .font(.system(size:  16.0))
                     .offset(y:geometry.size.height * -0.5)
                 Circle()
                     .stroke(lineWidth: 20.0)
@@ -47,8 +47,8 @@ struct WCircleProgressView: View {
 //MARK: - PREVIEW
 struct WCircleProgressView_Previews: PreviewProvider {
     static var previews: some View {
+        
         WCircleProgressView(countdownVM: CountdownViewModel())
-//            .previewLayout(.sizeThatFits)
             .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }
