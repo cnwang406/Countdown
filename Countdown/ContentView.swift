@@ -7,7 +7,7 @@
 
 import SwiftUI
 import Foundation
-
+import WidgetKit
 struct ContentView: View {
     
 //    @StateObject var countdownVM = CountdownModelView(dateFrom: nil, dateFromEnabled: false, dateTo: nil, dateToEnabled: true)
@@ -48,7 +48,7 @@ struct ContentView: View {
                 
             }
             .sheet(isPresented: $isSettingViewShow, onDismiss: {
-                
+                WidgetCenter.shared.reloadAllTimelines()
             }, content: {
                 SetDateView(countdownVM: countdownVM)
             })

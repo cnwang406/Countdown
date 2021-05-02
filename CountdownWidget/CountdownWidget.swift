@@ -44,14 +44,14 @@ struct CountdownWidgetEntryView : View {
     @StateObject var countdownVM = CountdownViewModel()
 
     var body: some View {
-//        Text(entry.date, style: .time)
         ZStack{
+//            Text(entry.date, style: .time)
             Image("tesla")
                 .resizable()
                 .scaledToFit().opacity(0.3)
             WidgetProgressView()
                 .environmentObject(countdownVM)
-//            ContentView()
+
             
         }
     }

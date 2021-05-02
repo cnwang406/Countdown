@@ -542,6 +542,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = CountdownWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = L43KX6QVVV;
 				INFOPLIST_FILE = CountdownWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -564,6 +565,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = CountdownWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = L43KX6QVVV;
 				INFOPLIST_FILE = CountdownWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

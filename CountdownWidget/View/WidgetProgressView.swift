@@ -14,22 +14,22 @@ struct WidgetProgressView: View {
     var body: some View {
         ZStack{
             Color.blue.opacity(0.3)
-        if countdownVM.dateFromEnabled && countdownVM.dateToEnabled {
-            VStack{
-//                Text("\(countdownVM.dateFromEnabled.description) \(countdownVM.dateToEnabled.description)")
-                WCircleProgressView(countdownVM : countdownVM)
+            if countdownVM.dateFromEnabled && countdownVM.dateToEnabled {
+                VStack{
+                    //                Text("\(countdownVM.dateFromEnabled.description) \(countdownVM.dateToEnabled.description)")
+                    WCircleProgressView(countdownVM : countdownVM)
+                }
+            } else if !countdownVM.dateToEnabled && countdownVM.dateToEnabled {
+                VStack{
+                    //                Text("\(countdownVM.dateFromEnabled.description) \(countdownVM.dateToEnabled.description)")
+                    WLeftDaysView(countdownVM : countdownVM)
+                }
+            } else {
+                VStack{
+                    //                Text("\(countdownVM.dateFromEnabled.description) \(countdownVM.dateToEnabled.description)")
+                    WElpasedView(countdownVM : countdownVM)
+                }
             }
-        } else if countdownVM.dateToEnabled && !countdownVM.dateToEnabled {
-            VStack{
-//                Text("\(countdownVM.dateFromEnabled.description) \(countdownVM.dateToEnabled.description)")
-                WLeftDaysView(countdownVM : countdownVM)
-            }
-        } else {
-            VStack{
-//                Text("\(countdownVM.dateFromEnabled.description) \(countdownVM.dateToEnabled.description)")
-                WElpasedView(countdownVM : countdownVM)
-            }
-        }
         }
         
     }
@@ -40,7 +40,7 @@ struct WidgetProgressView: View {
 struct WidgetProgressView_Previews: PreviewProvider {
     static var previews: some View {
         WidgetProgressView()
-//            .environmentObject(CountdownViewModel())
+            //            .environmentObject(CountdownViewModel())
             .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }
