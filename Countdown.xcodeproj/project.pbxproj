@@ -20,8 +20,10 @@
 		27B7E227263D453900E3CE71 /* ElapsedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D57D02263D3C4200C92460 /* ElapsedView.swift */; };
 		27B7E228263D66A400E3CE71 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BD808D263AF903009A8DA9 /* ContentView.swift */; };
 		27B7E229263D66B800E3CE71 /* SetDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A9DEAC263C0B0D005480AA /* SetDateView.swift */; };
-		27B7E22B263D677900E3CE71 /* WidgetProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B7E22A263D677900E3CE71 /* WidgetProgressView.swift */; };
 		27B7E22C263D677900E3CE71 /* WidgetProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B7E22A263D677900E3CE71 /* WidgetProgressView.swift */; };
+		27B7E233263E577100E3CE71 /* WCircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B7E232263E577100E3CE71 /* WCircleProgressView.swift */; };
+		27B7E235263E5D8A00E3CE71 /* WElpasedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B7E234263E5D8A00E3CE71 /* WElpasedView.swift */; };
+		27B7E237263E631000E3CE71 /* WLeftDaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B7E236263E631000E3CE71 /* WLeftDaysView.swift */; };
 		27BD808C263AF903009A8DA9 /* CountdownApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BD808B263AF903009A8DA9 /* CountdownApp.swift */; };
 		27BD808E263AF903009A8DA9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BD808D263AF903009A8DA9 /* ContentView.swift */; };
 		27BD8090263AF905009A8DA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27BD808F263AF905009A8DA9 /* Assets.xcassets */; };
@@ -72,6 +74,11 @@
 		27A9DEB4263CF858005480AA /* CountdownProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownProgressView.swift; sourceTree = "<group>"; };
 		27B7E224263D421600E3CE71 /* LeftDaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftDaysView.swift; sourceTree = "<group>"; };
 		27B7E22A263D677900E3CE71 /* WidgetProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetProgressView.swift; sourceTree = "<group>"; };
+		27B7E22D263D6AEC00E3CE71 /* CountdownWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CountdownWidgetExtension.entitlements; sourceTree = "<group>"; };
+		27B7E22E263E19A600E3CE71 /* Countdown.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Countdown.entitlements; sourceTree = "<group>"; };
+		27B7E232263E577100E3CE71 /* WCircleProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCircleProgressView.swift; sourceTree = "<group>"; };
+		27B7E234263E5D8A00E3CE71 /* WElpasedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WElpasedView.swift; sourceTree = "<group>"; };
+		27B7E236263E631000E3CE71 /* WLeftDaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WLeftDaysView.swift; sourceTree = "<group>"; };
 		27BD8088263AF903009A8DA9 /* Countdown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Countdown.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27BD808B263AF903009A8DA9 /* CountdownApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownApp.swift; sourceTree = "<group>"; };
 		27BD808D263AF903009A8DA9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -110,11 +117,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		27B7E22F263E564600E3CE71 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				27B7E22A263D677900E3CE71 /* WidgetProgressView.swift */,
+				27B7E236263E631000E3CE71 /* WLeftDaysView.swift */,
+				27B7E232263E577100E3CE71 /* WCircleProgressView.swift */,
+				27B7E234263E5D8A00E3CE71 /* WElpasedView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		27BD807F263AF903009A8DA9 = {
 			isa = PBXGroup;
 			children = (
+				27B7E22D263D6AEC00E3CE71 /* CountdownWidgetExtension.entitlements */,
 				27BD808A263AF903009A8DA9 /* Countdown */,
-				27D75750263BF8B600698900 /* Extensions */,
 				27BD80A5263B05EE009A8DA9 /* CountdownWidget */,
 				27BD80A0263B05EE009A8DA9 /* Frameworks */,
 				27BD8089263AF903009A8DA9 /* Products */,
@@ -133,12 +151,14 @@
 		27BD808A263AF903009A8DA9 /* Countdown */ = {
 			isa = PBXGroup;
 			children = (
+				27B7E22E263E19A600E3CE71 /* Countdown.entitlements */,
 				27BD808B263AF903009A8DA9 /* CountdownApp.swift */,
 				27BD808D263AF903009A8DA9 /* ContentView.swift */,
 				27C901DF263B72B300BB8BAA /* ViewModel */,
 				27C901DE263B729D00BB8BAA /* View */,
 				27BD808F263AF905009A8DA9 /* Assets.xcassets */,
 				27BD8094263AF905009A8DA9 /* Info.plist */,
+				27D75750263BF8B600698900 /* Extensions */,
 				27BD8091263AF905009A8DA9 /* Preview Content */,
 			);
 			path = Countdown;
@@ -164,10 +184,10 @@
 		27BD80A5263B05EE009A8DA9 /* CountdownWidget */ = {
 			isa = PBXGroup;
 			children = (
+				27B7E22F263E564600E3CE71 /* View */,
 				27BD80A6263B05EE009A8DA9 /* CountdownWidget.swift */,
 				27BD80A8263B05F1009A8DA9 /* Assets.xcassets */,
 				27BD80AA263B05F1009A8DA9 /* Info.plist */,
-				27B7E22A263D677900E3CE71 /* WidgetProgressView.swift */,
 			);
 			path = CountdownWidget;
 			sourceTree = "<group>";
@@ -307,7 +327,6 @@
 				27C901E1263B72D000BB8BAA /* CountdownViewModel.swift in Sources */,
 				27A9DEAD263C0B0D005480AA /* SetDateView.swift in Sources */,
 				27D57D00263D39DB00C92460 /* CircleProgressView.swift in Sources */,
-				27B7E22B263D677900E3CE71 /* WidgetProgressView.swift in Sources */,
 				27BD808E263AF903009A8DA9 /* ContentView.swift in Sources */,
 				27A9DEB2263CF480005480AA /* DateDetailView.swift in Sources */,
 				27D75752263BF8CD00698900 /* UserDefaults+Extensions.swift in Sources */,
@@ -329,12 +348,15 @@
 				27B7E22C263D677900E3CE71 /* WidgetProgressView.swift in Sources */,
 				27A9DEB0263CED38005480AA /* Date+Extensions.swift in Sources */,
 				27D57D01263D3C1A00C92460 /* CircleProgressView.swift in Sources */,
+				27B7E237263E631000E3CE71 /* WLeftDaysView.swift in Sources */,
 				27B7E226263D421600E3CE71 /* LeftDaysView.swift in Sources */,
 				27BD80A7263B05EE009A8DA9 /* CountdownWidget.swift in Sources */,
 				27B7E228263D66A400E3CE71 /* ContentView.swift in Sources */,
 				27A9DEB3263CF4C7005480AA /* DateDetailView.swift in Sources */,
+				27B7E233263E577100E3CE71 /* WCircleProgressView.swift in Sources */,
 				27B7E227263D453900E3CE71 /* ElapsedView.swift in Sources */,
 				27A9DEB6263CF858005480AA /* CountdownProgressView.swift in Sources */,
+				27B7E235263E5D8A00E3CE71 /* WElpasedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +493,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Countdown/Countdown.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Countdown/Preview Content\"";
 				DEVELOPMENT_TEAM = L43KX6QVVV;
@@ -494,6 +517,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Countdown/Countdown.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Countdown/Preview Content\"";
 				DEVELOPMENT_TEAM = L43KX6QVVV;
@@ -516,6 +540,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = CountdownWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L43KX6QVVV;
 				INFOPLIST_FILE = CountdownWidget/Info.plist;
@@ -537,6 +562,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = CountdownWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L43KX6QVVV;
 				INFOPLIST_FILE = CountdownWidget/Info.plist;

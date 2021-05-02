@@ -13,7 +13,8 @@ class CountdownViewModel: ObservableObject{
     @Published var dateTo: Date
     @Published var dateFromEnabled: Bool
     @Published var dateToEnabled: Bool
-    @Published var title: String 
+    @Published var title: String
+    
     var total: Double {
         Double( Calendar.current.dateComponents([.day], from: dateFrom , to: dateTo ).day ?? 1)
     }
@@ -30,11 +31,11 @@ class CountdownViewModel: ObservableObject{
     let fmt = ISO8601DateFormatter()
 
     init(){
-        self.dateFrom =  UserDefaults.standard.dateFrom
-        self.dateTo = UserDefaults.standard.dateTo
-        self.dateFromEnabled = UserDefaults.standard.dateFromEnabled
-        self.dateToEnabled =  UserDefaults.standard.dateToEnabled
-        self.title = UserDefaults.standard.title
+        self.dateFrom =  UserDefaults(suiteName: "group.com.cnwang")?.dateFrom ?? Date()
+        self.dateTo = UserDefaults(suiteName: "group.com.cnwang")?.dateTo ?? Date()
+        self.dateFromEnabled = UserDefaults(suiteName: "group.com.cnwang")?.dateFromEnabled ?? false
+        self.dateToEnabled =  UserDefaults(suiteName: "group.com.cnwang")?.dateToEnabled ?? true
+        self.title = UserDefaults(suiteName: "group.com.cnwang")?.title ?? "UNTITLED"
         self.unit = "Days"
     }
     var targetDate: Date{

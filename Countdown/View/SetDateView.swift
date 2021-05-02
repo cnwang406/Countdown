@@ -10,20 +10,22 @@ import SwiftUI
 struct SetDateView: View {
     //MARK: - PROPERTIES
     @Environment(\.presentationMode) var presentationMode
-    @State var std = UserDefaults.standard
-    @State var dateFrom: Date = UserDefaults.standard.dateFrom
-    @State var dateTo: Date = UserDefaults.standard.dateTo
-    @State var dateFromEnabled: Bool = UserDefaults.standard.dateFromEnabled
-    @State var dateToEnabled: Bool = UserDefaults.standard.dateToEnabled
-    @State var title: String = UserDefaults.standard.title
-    
+    @StateObject var countdownVM: CountdownViewModel
+//    @State var std = UserDefaults.standard
+//    @State var dateFrom: Date = UserDefaults(suiteName: "group.com.cnwang")?.dateFrom ?? Date()
+//    @State var dateTo: Date = UserDefaults(suiteName: "group.com.cnwang")?.dateTo ?? Date()
+//    @State var dateFromEnabled: Bool = UserDefaults(suiteName: "group.com.cnwang")?.dateFromEnabled ?? false
+//    @State var dateToEnabled: Bool = UserDefaults(suiteName: "group.com.cnwang")?.dateToEnabled ?? true
+//    @State var title: String = UserDefaults(suiteName: "group.com.cnwang")?.title ?? "UNTITLED"
+//
     @State var message: String = "ERROR"
     func save(){
-        UserDefaults.standard.setValue(dateFrom, forKey: "dateFrom")
-        UserDefaults.standard.setValue(dateTo, forKey: "dateTo")
-        UserDefaults.standard.setValue(dateFromEnabled, forKey: "dateFromEnabled")
-        UserDefaults.standard.setValue(dateToEnabled, forKey: "dateToEnabled")
-        UserDefaults.standard.setValue(title, forKey: "title")
+        UserDefaults(suiteName: "group.com.cnwang")?.setValue(countdownVM.dateFrom, forKey: "dateFrom")
+        UserDefaults(suiteName: "group.com.cnwang")?.setValue(countdownVM.dateTo, forKey: "dateTo")
+        UserDefaults(suiteName: "group.com.cnwang")?.setValue(countdownVM.dateFromEnabled, forKey: "dateFromEnabled")
+        UserDefaults(suiteName: "group.com.cnwang")?.setValue(countdownVM.dateToEnabled, forKey: "dateToEnabled")
+        UserDefaults(suiteName: "group.com.cnwang")?.setValue(countdownVM.title, forKey: "title")
+        
     }
     //MARK: - BODY
     var body: some View {
@@ -31,33 +33,33 @@ struct SetDateView: View {
         NavigationView{
             VStack{
                 Section(header: Text("設定起始/結束 日期")){
-                    Toggle(isOn: $dateFromEnabled, label: {
+                    Toggle(isOn: $countdownVM.dateFromEnabled, label: {
                         Text("起始")
                     })
-                    .onChange(of: dateFromEnabled, perform: { value in
-                        if !dateToEnabled && !dateFromEnabled {
-                            dateFromEnabled.toggle()
+                    .onChange(of: countdownVM.dateFromEnabled, perform: { value in
+                        if !countdownVM.dateToEnabled && !countdownVM.dateFromEnabled {
+                            countdownVM.dateFromEnabled.toggle()
                         }
                     })
                     
-                    DatePicker("Start from", selection: $dateFrom)
-                        .disabled(!dateFromEnabled)
+                    DatePicker("Start from", selection: $countdownVM.dateFrom)
+                        .disabled(!countdownVM.dateFromEnabled)
                     
-                    Toggle(isOn: $dateToEnabled, label: {
+                    Toggle(isOn: $countdownVM.dateToEnabled, label: {
                         Text("結束")
                     })
-                    .onChange(of: dateToEnabled, perform: { value in
-                        if !dateToEnabled && !dateFromEnabled {
-                            dateToEnabled.toggle()
+                    .onChange(of: countdownVM.dateToEnabled, perform: { value in
+                        if !countdownVM.dateToEnabled && !countdownVM.dateFromEnabled {
+                            countdownVM.dateToEnabled.toggle()
                         }
                     })
-                    DatePicker("End at", selection: $dateTo)
-                        .disabled(!dateToEnabled)
+                    DatePicker("End at", selection: $countdownVM.dateTo)
+                        .disabled(!countdownVM.dateToEnabled)
                     HStack{
                         Text("Subject")
                         Spacer()
                             
-                        TextField("UNTITLED", text: $title)
+                        TextField("UNTITLED", text: $countdownVM.title)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                     }
                     GroupBox(label: Text("說明")){
@@ -75,8 +77,14 @@ struct SetDateView: View {
                 
                 Spacer()
                 Button(action: {
-                    if dateFrom.fullDistance(from: dateTo, resultIn: .hour) ?? 0 > 0 {
+                    if countdownVM.dateFrom.fullDistance(from: countdownVM.dateTo, resultIn: .hour) ?? 0 > 0 {
                         message = ""
+//                        self.countdownVM.title = title
+//                        self.countdownVM.dateFrom = dateFrom
+//                        self.countdownVM.dateFromEnabled = dateFromEnabled
+//                        self.countdownVM.dateTo = dateTo
+//                        self.countdownVM.dateToEnabled = dateToEnabled
+                        
                         self.save()
                         presentationMode.wrappedValue.dismiss()
                     } else {
@@ -107,6 +115,6 @@ struct SetDateView: View {
 //MARK: - PREVIEW
 struct SetDateView_Previews: PreviewProvider {
     static var previews: some View {
-        SetDateView()
+        SetDateView( countdownVM: CountdownViewModel())
     }
 }

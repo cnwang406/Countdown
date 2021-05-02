@@ -9,23 +9,26 @@ import SwiftUI
 
 struct LeftDaysView: View {
     //MARK: - PROPERTIES
-    @State var leftDays: Double
-    @State var unit: String
+    @StateObject var countdownVM: CountdownViewModel
     //MARK: - BODY
     var body: some View {
-        VStack{
-            
-            Text("Elapsed")
-                .font(.system(size: 20))
-            Text("\(leftDays, specifier: "%0.1f")")
-                .font(.system(size: 72))
-                .fontWeight(.bold)
-            HStack{
-                Spacer()
-                Text(unit)
-                .font(.system(size: 40))
-            }
-        }.frame(width: 100, height: 100, alignment: .center)
+        GeometryReader { geometry in
+            VStack{
+                
+                HStack{
+                    VStack{
+                        Text("Left")
+                        Text(countdownVM.unit)
+                    }.padding(.vertical, 20)
+                    .font(.system(size: 20))
+                    Text("\(countdownVM.left , specifier: "%0.1f")")
+                        .font(.system(size: 72))
+                        .fontWeight(.bold)
+//                    Spacer()
+                        .font(.system(size: 40))
+                }
+            }.frame(width: geometry.size.width, height: 150, alignment: .center)
+        }
     }
 }
 
@@ -33,7 +36,7 @@ struct LeftDaysView: View {
 //MARK: - PREVIEW
 struct LeftDaysView_Previews: PreviewProvider {
     static var previews: some View {
-        LeftDaysView(leftDays: 60, unit: "Days")
+        LeftDaysView(countdownVM: CountdownViewModel())
             .previewLayout(.sizeThatFits)
     }
 }

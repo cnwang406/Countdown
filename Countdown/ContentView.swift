@@ -12,14 +12,14 @@ struct ContentView: View {
     
 //    @StateObject var countdownVM = CountdownModelView(dateFrom: nil, dateFromEnabled: false, dateTo: nil, dateToEnabled: true)
     
-    let fmt = ISO8601DateFormatter()
+//    let fmt = ISO8601DateFormatter()
     @State var isSettingViewShow: Bool = false
-    var targetDate: Date{
-        let fmt = ISO8601DateFormatter()
-        fmt.timeZone = TimeZone.current
-        return fmt.date(from: "2021-05-29T14:00:00+0800")!
-    }
-    
+//    var targetDate: Date{
+//        let fmt = ISO8601DateFormatter()
+//        fmt.timeZone = TimeZone.current
+//        return fmt.date(from: "2021-05-29T14:00:00+0800")!
+//    }
+//
     @StateObject var countdownVM: CountdownViewModel = CountdownViewModel()
     var body: some View {
         NavigationView {
@@ -29,21 +29,12 @@ struct ContentView: View {
                     .scaledToFit()
                     .frame(width: 240, height: 240, alignment: .center)
                 
-                Text("Tesla is coming...")
+                Text(countdownVM.title)
                     .font(.title)
                     .padding()
-                
-//                HStack(alignment:.bottom){
-//                    Text("\(countdownVM.left().value, specifier: "%0.1f")")
-//    //                Text("\(countdownVM.difference(targetDate: targetDate).value, specifier: "%0.1f")")
-//                        .font(.system(size: 120))
-//                        .fontWeight(.bold)
-//                    Text("\(countdownVM.left().unit)")
-//                        .font(.title)
-//
-//                }
-                CountdownProgressView()
-                    .environmentObject(countdownVM)
+
+                CountdownProgressView(countdownVM: countdownVM)
+//                    .environmentObject(countdownVM)
                 Spacer()
                     DateDetailView()
                         .environmentObject(countdownVM)
@@ -56,8 +47,10 @@ struct ContentView: View {
                     
                 
             }
-            .sheet(isPresented: $isSettingViewShow, onDismiss: {}, content: {
-                SetDateView()
+            .sheet(isPresented: $isSettingViewShow, onDismiss: {
+                
+            }, content: {
+                SetDateView(countdownVM: countdownVM)
             })
             .padding()
             .onAppear(

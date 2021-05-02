@@ -9,17 +9,18 @@ import SwiftUI
 
 struct CountdownProgressView: View {
     //MARK: - PROPERTIES
-    @EnvironmentObject var countdownVM: CountdownViewModel
+//    @EnvironmentObject var countdownVM: CountdownViewModel
+    @ObservedObject var countdownVM: CountdownViewModel
     @State var message: String = ""
     //MARK: - BODY
     var body: some View {
         VStack{
             TabView{
-                CircleProgressView(total: countdownVM.total, current: countdownVM.current)
+                CircleProgressView(countdownVM : countdownVM)
                     .disabled(!countdownVM.dateFromEnabled && !countdownVM.dateToEnabled )
-                ElapsedView(elapsedDays:  countdownVM.total - countdownVM.current, unit: "Days")
+                ElapsedView(countdownVM : countdownVM)
                     .disabled(!countdownVM.dateFromEnabled)
-                LeftDaysView(leftDays: countdownVM.left, unit: "Days")
+                LeftDaysView(countdownVM : countdownVM)
                         .disabled(!countdownVM.dateToEnabled)
             }.tabViewStyle(PageTabViewStyle())
         }
@@ -41,8 +42,8 @@ struct CountdownProgressView: View {
 //MARK: - PREVIEW
 struct ProgressView_Previews: PreviewProvider {
     static var previews: some View {
-        CountdownProgressView()
-            .environmentObject(CountdownViewModel())
+        CountdownProgressView(countdownVM: CountdownViewModel())
+//            .environmentObject(CountdownViewModel())
             .previewLayout(.sizeThatFits)
     }
 }

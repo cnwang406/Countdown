@@ -9,23 +9,26 @@ import SwiftUI
 
 struct ElapsedView: View {
     //MARK: - PROPERTIES
-    @State var elapsedDays: Double
-    @State var unit: String
+    @StateObject var countdownVM: CountdownViewModel
     //MARK: - BODY
     var body: some View {
-        VStack{
-            
-            Text("Elapsed")
-                .font(.system(size: 20))
-            Text("\(elapsedDays, specifier: "%0.1f")")
-                .font(.system(size: 72))
-                .fontWeight(.bold)
-            HStack{
-                Spacer()
-                Text(unit)
-                .font(.system(size: 40))
-            }
-        }.frame(width: 100, height: 100, alignment: .center)
+        GeometryReader { geometry in
+            VStack{
+                
+                HStack{
+                    VStack{
+                        Text("Elapsed")
+                        Text(countdownVM.unit)
+                    }.padding(.vertical, 20)
+                    .font(.system(size: 20))
+                    Text("\(countdownVM.current, specifier: "%0.1f")")
+                        .font(.system(size: 72))
+                        .fontWeight(.bold)
+//                    Spacer()
+                        .font(.system(size: 40))
+                }
+            }.frame(width: geometry.size.width, height: 150, alignment: .center)
+        }
     }
 }
 
@@ -33,7 +36,7 @@ struct ElapsedView: View {
 //MARK: - PREVIEW
 struct ElapsedView_Previews: PreviewProvider {
     static var previews: some View {
-        ElapsedView(elapsedDays: 42.0, unit: "Hours")
+        ElapsedView(countdownVM: CountdownViewModel())
             .previewLayout(.sizeThatFits)
     }
 }
