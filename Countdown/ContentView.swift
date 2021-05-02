@@ -36,13 +36,12 @@ struct ContentView: View {
                 CountdownProgressView(countdownVM: countdownVM)
 //                    .environmentObject(countdownVM)
                 Spacer()
-                    DateDetailView()
-                        .environmentObject(countdownVM)
+                    DateDetailView(countdownVM: countdownVM)
                     .navigationTitle("Countdown")
                     .navigationBarItems(trailing: Button(action: {
                         isSettingViewShow.toggle()
                     }, label: {
-                        Image(systemName: "gearshape")
+                        Image(systemName: "info")
                     }))
                     
                 
