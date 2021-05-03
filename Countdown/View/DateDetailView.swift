@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import WidgetKit
 struct DateDetailView: View {
     //MARK: - PROPERTIES
     @StateObject var countdownVM: CountdownViewModel
@@ -21,7 +21,13 @@ struct DateDetailView: View {
                 .foregroundColor(countdownVM.dateFromEnabled ? .blue : .gray)
                 .onTapGesture(perform: {
                     countdownVM.dateFromEnabled.toggle()
+                    WidgetCenter.shared.reloadAllTimelines()
                 })
+                .onChange(of: countdownVM.dateFrom) { Equatable in
+                    print("onChange: \(Equatable)")
+                    WidgetCenter.shared.reloadAllTimelines()
+                }
+            
             
         }
             Spacer()
@@ -33,7 +39,11 @@ struct DateDetailView: View {
                     .foregroundColor(countdownVM.dateToEnabled ? .blue : .gray)
                     .onTapGesture(perform: {
                         countdownVM.dateToEnabled.toggle()
+                        WidgetCenter.shared.reloadAllTimelines()
                     })
+                    .onChange(of: countdownVM.dateTo) { Equatable in
+                        WidgetCenter.shared.reloadAllTimelines()
+                    }
             }
             
         }

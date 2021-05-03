@@ -19,9 +19,6 @@ struct WCircleProgressView: View {
          GeometryReader{ geometry in
             ZStack{
                 
-                Text(countdownVM.title)
-                    .font(.system(size:  16.0))
-                    .offset(y:geometry.size.height * -0.5)
                 Circle()
                     .stroke(lineWidth: 20.0)
                     .opacity(0.3)
@@ -32,6 +29,10 @@ struct WCircleProgressView: View {
                     .rotationEffect(Angle(degrees: 270.0))
                     .foregroundColor(ratio > 0.7 ? .green : .red)
                     .animation(.linear)
+                Text(countdownVM.title)
+                    .font(.system(size: min(geometry.size.height, geometry.size.width) * 0.15))
+                    
+                    .offset(y:geometry.size.height * -0.4)
                 Text("\(ratio * 100, specifier: "%0.1f")%")
                     .font(.system(size:  32.0))
                     .fontWeight(.bold)
