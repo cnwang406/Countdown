@@ -31,11 +31,11 @@ class CountdownViewModel: ObservableObject{
     }
     
     var left: Double{
-        total - current
+        (totalDays - currentDays) < 1.5 ? (totalDays - currentDays) * 24 : (totalDays - currentDays)
     }
     
     var leftUnit: String {
-        left <= 1.5 ? "Hours" : "Days"
+        (totalDays - currentDays) <= 1.5 ? "Hours" : "Days"
     }
     var elapsedUnit: String {
         currentDays <= 1.5 ? "Hours" : "Days"
