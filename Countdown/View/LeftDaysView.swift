@@ -18,7 +18,7 @@ struct LeftDaysView: View {
                 HStack{
                     VStack{
                         Text("Left")
-                        Text(countdownVM.unit)
+                        Text(countdownVM.leftUnit)
                     }.padding(.vertical, 20)
                     .font(.system(size: 20))
                     Text("\(countdownVM.left , specifier: "%0.1f")")

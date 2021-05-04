@@ -39,4 +39,11 @@ extension UserDefaults {
         return value
     }
     
+    var unit: String {
+        guard let value = self.value(forKey: "unit") as? String else {
+            return "Days"
+        }
+        return value
+    }
+    
 }

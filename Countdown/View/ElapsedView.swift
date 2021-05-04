@@ -18,7 +18,7 @@ struct ElapsedView: View {
                 HStack{
                     VStack{
                         Text("Elapsed")
-                        Text(countdownVM.unit)
+                        Text(countdownVM.elapsedUnit)
                     }.padding(.vertical, 20)
                     .font(.system(size: 20))
                     Text("\(countdownVM.current, specifier: "%0.1f")")

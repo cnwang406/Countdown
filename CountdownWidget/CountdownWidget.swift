@@ -23,8 +23,8 @@ struct Provider: TimelineProvider {
 
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
-        for hourOffset in 0 ..< 5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
+        for minuteOffset in 0 ..< 5 {
+            let entryDate = Calendar.current.date(byAdding: .minute, value: minuteOffset * 10, to: currentDate)!
             let entry = SimpleEntry(date: entryDate)
             entries.append(entry)
         }
@@ -36,6 +36,9 @@ struct Provider: TimelineProvider {
 
 struct SimpleEntry: TimelineEntry {
     let date: Date
+    var body: some View {
+        Text("PlaceHolder")
+    }
 }
 
 struct CountdownWidgetEntryView : View {
@@ -51,9 +54,10 @@ struct CountdownWidgetEntryView : View {
                 .scaledToFit().opacity(0.3)
             WidgetProgressView()
                 .environmentObject(countdownVM)
-
-            
         }
+        .onAppear(perform: {
+            print("Widget onAppear")
+        })
     }
 }
 
@@ -66,7 +70,7 @@ struct CountdownWidget: Widget {
             CountdownWidgetEntryView(entry: entry)
         }
         .configurationDisplayName("Countdown Widget")
-        .description("Countdown Widget.")
+        .description("Countdown Widget (only small, currently)")
     }
 }
 

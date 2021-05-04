@@ -13,20 +13,17 @@ struct WidgetProgressView: View {
     //MARK: - BODY
     var body: some View {
         ZStack{
-            Color.blue.opacity(0.3)
+//            Color.blue.opacity(0.3)
             if countdownVM.dateFromEnabled && countdownVM.dateToEnabled {
                 VStack{
-                    //                Text("\(countdownVM.dateFromEnabled.description) \(countdownVM.dateToEnabled.description)")
                     WCircleProgressView(countdownVM : countdownVM)
                 }
             } else if !countdownVM.dateFromEnabled && countdownVM.dateToEnabled {
                 VStack{
-                    //                Text("\(countdownVM.dateFromEnabled.description) \(countdownVM.dateToEnabled.description)")
                     WLeftDaysView(countdownVM : countdownVM)
                 }
             } else {
                 VStack{
-                    //                Text("\(countdownVM.dateFromEnabled.description) \(countdownVM.dateToEnabled.description)")
                     WElpasedView(countdownVM : countdownVM)
                 }
             }

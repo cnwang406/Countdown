@@ -15,20 +15,21 @@ struct WLeftDaysView: View {
         GeometryReader { geometry in
             VStack(alignment: .center){
                 Text(countdownVM.title)
-                    .font(.system(size: 24))
+                    .frame(width: geometry.size.width)
+                        .font(.system(size: min(geometry.size.height, geometry.size.width) / CGFloat(countdownVM.title.count) / 6 * 10))
+                    .background(Color.blue.opacity(0.1))
+                    
                 HStack{
                     VStack(alignment:.leading){
                         Text("Left")
-                        Text(countdownVM.unit)
+                        Text(countdownVM.leftUnit)
                     }.font(.system(size: 11))
                     .opacity(0.7)
                     .frame(width: geometry.size.width * 0.2)
                     Text("\(countdownVM.left , specifier: "%0.1f")")
                         .font(.system(size: 40))
                         .fontWeight(.bold)
-//                        .aspectRatio(.5, contentMode: .fill)
-//                        .padding(.horizontal,0)
-                        .foregroundColor(countdownVM.left < 1 || countdownVM.unit == "Hours" ? .green : .red)
+                        .foregroundColor(countdownVM.leftUnit == "Hours" ? .red : .green)
                     
                 } //: HStack
                 .frame(width: geometry.size.width * 0.95,  height:geometry.size.height * 0.5)
@@ -36,7 +37,9 @@ struct WLeftDaysView: View {
             
             .frame(width: geometry.size.width * 0.99,  height:geometry.size.height * 0.99)
             
-        }
+        }.onAppear(perform: {
+            print ("WLeftDaysView .onAppear()")
+        })
     }
 }
 

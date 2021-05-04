@@ -15,16 +15,33 @@ class CountdownViewModel: ObservableObject{
     @Published var dateToEnabled: Bool
     @Published var title: String
     
-    var total: Double {
+    
+    
+    var totalDays: Double {
         Double( Calendar.current.dateComponents([.hour], from: dateFrom , to: dateTo ).hour ?? 1) / 24.0
     }
-    var current: Double {
+    var total: Double {
+        totalDays <= 1.5 ? totalDays * 24 : totalDays
+    }
+    var currentDays: Double {
         Double( Calendar.current.dateComponents([.hour], from: dateFrom, to: today).hour ?? 0) / 24.0
     }
+    var current: Double {
+        currentDays <= 1.5 ? currentDays * 24 : currentDays
+    }
+    
     var left: Double{
         total - current
     }
-    @Published var unit: String
+    
+    var leftUnit: String {
+        left <= 1.5 ? "Hours" : "Days"
+    }
+    var elapsedUnit: String {
+        currentDays <= 1.5 ? "Hours" : "Days"
+    }
+    
+    
     
     var today =  Date()
     
@@ -36,7 +53,8 @@ class CountdownViewModel: ObservableObject{
         self.dateFromEnabled = UserDefaults(suiteName: "group.com.cnwang")?.dateFromEnabled ?? false
         self.dateToEnabled =  UserDefaults(suiteName: "group.com.cnwang")?.dateToEnabled ?? true
         self.title = UserDefaults(suiteName: "group.com.cnwang")?.title ?? "UNTITLED"
-        self.unit = "Days"
+//        self.leftUnit = UserDefaults(suiteName: "group.com.cnwang")?.leftUnit ?? "*Days"
+//        self.elapsedUnit = UserDefaults(suiteName: "group.com.cnwang")?.elapsedUnit ?? "*Days"
     }
     func save(){
         UserDefaults(suiteName: "group.com.cnwang")?.setValue(self.dateFrom, forKey: "dateFrom")

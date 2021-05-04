@@ -21,10 +21,15 @@ struct DateDetailView: View {
                 .foregroundColor(countdownVM.dateFromEnabled ? .blue : .gray)
                 .onTapGesture(perform: {
                     countdownVM.dateFromEnabled.toggle()
+                    if !countdownVM.dateToEnabled && !countdownVM.dateFromEnabled {
+                        countdownVM.dateFromEnabled.toggle()
+                    }
+                    print ("reload timeline")
                     WidgetCenter.shared.reloadAllTimelines()
                 })
                 .onChange(of: countdownVM.dateFrom) { Equatable in
                     print("onChange: \(Equatable)")
+                    print ("reload timeline")
                     WidgetCenter.shared.reloadAllTimelines()
                 }
             
@@ -39,9 +44,14 @@ struct DateDetailView: View {
                     .foregroundColor(countdownVM.dateToEnabled ? .blue : .gray)
                     .onTapGesture(perform: {
                         countdownVM.dateToEnabled.toggle()
+                        if !countdownVM.dateToEnabled && !countdownVM.dateFromEnabled {
+                            countdownVM.dateToEnabled.toggle()
+                        }
+                        print ("reload timeline")
                         WidgetCenter.shared.reloadAllTimelines()
                     })
                     .onChange(of: countdownVM.dateTo) { Equatable in
+                        print ("reload timeline")
                         WidgetCenter.shared.reloadAllTimelines()
                     }
             }
