@@ -12,15 +12,15 @@ struct Provider: TimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
         SimpleEntry(date: Date())
     }
-
+    
     func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
         let entry = SimpleEntry(date: Date())
         completion(entry)
     }
-
+    
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         var entries: [SimpleEntry] = []
-
+        
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
         for minuteOffset in 0 ..< 5 {
@@ -28,7 +28,7 @@ struct Provider: TimelineProvider {
             let entry = SimpleEntry(date: entryDate)
             entries.append(entry)
         }
-
+        
         let timeline = Timeline(entries: entries, policy: .atEnd)
         completion(timeline)
     }
@@ -44,7 +44,7 @@ struct CountdownWidgetEntryView : View {
     var entry: Provider.Entry
     @Environment(\.widgetFamily) var widgetFamily
     @StateObject var countdownVM = CountdownViewModel()
-    @State var counter: Int = 0
+    
     var body: some View {
         ZStack{
             Image("tesla")
@@ -52,12 +52,19 @@ struct CountdownWidgetEntryView : View {
                 .scaledToFit().opacity(0.3)
             WidgetProgressView()
                 .environmentObject(countdownVM)
-            HStack {
-                Text(entry.date, style: .time)
-                Text("\(counter)")
-            }.opacity(0.2)
-            .offset(y:60)
-        }
+            if widgetFamily == .systemLarge {
+                HStack {
+                    Text(entry.date, style: .time)
+                    Text(entry.date.description)
+                    VStack{
+                    Text("\(countdownVM.dateFrom.description)")
+                    Text("\(countdownVM.dateTo.description)")
+                    }
+//                        .font(.footnote)
+                }.opacity(0.9)
+                .offset(y: 90)
+            }
+        } //:ZStack
         .onAppear(perform: {
             print("Widget onAppear")
         })
@@ -68,7 +75,7 @@ struct CountdownWidgetEntryView : View {
 @main
 struct CountdownWidget: Widget {
     let kind: String = "CountdownWidget"
-
+    
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
             CountdownWidgetEntryView(entry: entry)
@@ -84,13 +91,13 @@ struct CountdownWidget_Previews: PreviewProvider {
         Group {
             CountdownWidgetEntryView(entry: SimpleEntry(date: Date()))
                 .previewContext(WidgetPreviewContext(family: .systemSmall))
-//                .environmentObject(countdownVM)
-//            CountdownWidgetEntryView(entry: SimpleEntry(date: Date()))
-//                .previewContext(WidgetPreviewContext(family: .systemMedium))
-////                .environmentObject(countdownVM)
-//            CountdownWidgetEntryView(entry: SimpleEntry(date: Date()))
-//                .previewContext(WidgetPreviewContext(family: .systemLarge))
-//                .environmentObject(countdownVM)
+            //                .environmentObject(countdownVM)
+                        CountdownWidgetEntryView(entry: SimpleEntry(date: Date()))
+                            .previewContext(WidgetPreviewContext(family: .systemMedium))
+            ////                .environmentObject(countdownVM)
+                        CountdownWidgetEntryView(entry: SimpleEntry(date: Date()))
+                            .previewContext(WidgetPreviewContext(family: .systemLarge))
+//                            .environmentObject(countdownVM)
         }
     }
 }
