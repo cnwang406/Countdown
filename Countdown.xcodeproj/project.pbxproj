@@ -22,7 +22,7 @@
 		27B7E229263D66B800E3CE71 /* SetDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A9DEAC263C0B0D005480AA /* SetDateView.swift */; };
 		27B7E22C263D677900E3CE71 /* WidgetProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B7E22A263D677900E3CE71 /* WidgetProgressView.swift */; };
 		27B7E233263E577100E3CE71 /* WCircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B7E232263E577100E3CE71 /* WCircleProgressView.swift */; };
-		27B7E235263E5D8A00E3CE71 /* WElpasedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B7E234263E5D8A00E3CE71 /* WElpasedView.swift */; };
+		27B7E235263E5D8A00E3CE71 /* WElapsedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B7E234263E5D8A00E3CE71 /* WElapsedView.swift */; };
 		27B7E237263E631000E3CE71 /* WLeftDaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B7E236263E631000E3CE71 /* WLeftDaysView.swift */; };
 		27BD808C263AF903009A8DA9 /* CountdownApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BD808B263AF903009A8DA9 /* CountdownApp.swift */; };
 		27BD808E263AF903009A8DA9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BD808D263AF903009A8DA9 /* ContentView.swift */; };
@@ -77,7 +77,7 @@
 		27B7E22D263D6AEC00E3CE71 /* CountdownWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CountdownWidgetExtension.entitlements; sourceTree = "<group>"; };
 		27B7E22E263E19A600E3CE71 /* Countdown.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Countdown.entitlements; sourceTree = "<group>"; };
 		27B7E232263E577100E3CE71 /* WCircleProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCircleProgressView.swift; sourceTree = "<group>"; };
-		27B7E234263E5D8A00E3CE71 /* WElpasedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WElpasedView.swift; sourceTree = "<group>"; };
+		27B7E234263E5D8A00E3CE71 /* WElapsedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WElapsedView.swift; sourceTree = "<group>"; };
 		27B7E236263E631000E3CE71 /* WLeftDaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WLeftDaysView.swift; sourceTree = "<group>"; };
 		27BD8088263AF903009A8DA9 /* Countdown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Countdown.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27BD808B263AF903009A8DA9 /* CountdownApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownApp.swift; sourceTree = "<group>"; };
@@ -123,7 +123,7 @@
 				27B7E22A263D677900E3CE71 /* WidgetProgressView.swift */,
 				27B7E236263E631000E3CE71 /* WLeftDaysView.swift */,
 				27B7E232263E577100E3CE71 /* WCircleProgressView.swift */,
-				27B7E234263E5D8A00E3CE71 /* WElpasedView.swift */,
+				27B7E234263E5D8A00E3CE71 /* WElapsedView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -356,7 +356,7 @@
 				27B7E233263E577100E3CE71 /* WCircleProgressView.swift in Sources */,
 				27B7E227263D453900E3CE71 /* ElapsedView.swift in Sources */,
 				27A9DEB6263CF858005480AA /* CountdownProgressView.swift in Sources */,
-				27B7E235263E5D8A00E3CE71 /* WElpasedView.swift in Sources */,
+				27B7E235263E5D8A00E3CE71 /* WElapsedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

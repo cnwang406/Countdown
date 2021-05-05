@@ -9,9 +9,10 @@ import SwiftUI
 
 struct CircleProgressView: View {
     //MARK: - PROPERTIES
-//    var total: Double
-//    var current: Double
     @StateObject var countdownVM: CountdownViewModel
+    var ratio: Double {
+        countdownVM.current / countdownVM.total
+    }
     //MARK: - BODY
     var body: some View {
 //        self.total = countdownVM.total
@@ -31,7 +32,7 @@ struct CircleProgressView: View {
                     .rotationEffect(Angle(degrees: 270.0))
                     .foregroundColor(.red)
                     .animation(.linear)
-                Text("\(countdownVM.current / countdownVM.total * 100, specifier: "%0.1f")%")
+                Text("\(ratio * 100, specifier: "%0.1f")%")
                     .font(.system(size:  36.0))
                     .fontWeight(.bold)
                     .opacity(0.6)

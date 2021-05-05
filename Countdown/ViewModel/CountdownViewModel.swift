@@ -55,6 +55,7 @@ class CountdownViewModel: ObservableObject{
         self.title = UserDefaults(suiteName: "group.com.cnwang")?.title ?? "UNTITLED"
 //        self.leftUnit = UserDefaults(suiteName: "group.com.cnwang")?.leftUnit ?? "*Days"
 //        self.elapsedUnit = UserDefaults(suiteName: "group.com.cnwang")?.elapsedUnit ?? "*Days"
+        print ("CountdownVM init()")
     }
     func save(){
         UserDefaults(suiteName: "group.com.cnwang")?.setValue(self.dateFrom, forKey: "dateFrom")
@@ -62,7 +63,7 @@ class CountdownViewModel: ObservableObject{
         UserDefaults(suiteName: "group.com.cnwang")?.setValue(self.dateFromEnabled, forKey: "dateFromEnabled")
         UserDefaults(suiteName: "group.com.cnwang")?.setValue(self.dateToEnabled, forKey: "dateToEnabled")
         UserDefaults(suiteName: "group.com.cnwang")?.setValue(self.title, forKey: "title")
-        
+        print ("CountdownVM save()")
     }
     
 

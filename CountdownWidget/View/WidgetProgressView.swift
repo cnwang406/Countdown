@@ -24,7 +24,7 @@ struct WidgetProgressView: View {
                 }
             } else {
                 VStack{
-                    WElpasedView(countdownVM : countdownVM)
+                    WElapsedView(countdownVM : countdownVM)
                 }
             }
         }

@@ -10,9 +10,9 @@ import Foundation
 import WidgetKit
 struct ContentView: View {
     
-
+    
     @State var isSettingViewShow: Bool = false
-
+    
     @StateObject var countdownVM: CountdownViewModel = CountdownViewModel()
     var body: some View {
         NavigationView {
@@ -25,31 +25,37 @@ struct ContentView: View {
                 Text(countdownVM.title)
                     .font(.title)
                     .padding()
-
+                
                 CountdownProgressView(countdownVM: countdownVM)
-
+                
                 Spacer()
-                    DateDetailView(countdownVM: countdownVM)
-                    .navigationTitle("Countdown")
-                    .navigationBarItems(trailing: Button(action: {
-                        isSettingViewShow.toggle()
-                    }, label: {
-                        Image(systemName: "info")
-                    }))
-                    
+                DateDetailView(countdownVM: countdownVM)
+                
                 
             }
+            
+            .padding()
+            
+            .toolbar(content: {
+                ToolbarItem(placement: .principal, content: {
+                                Text("Countdown")
+                })
+                ToolbarItem(placement: .navigationBarTrailing, content: {
+                    Button(action: {
+                        isSettingViewShow.toggle()
+                    }, label: {
+                        Image(systemName: "gear")
+                    })
+                })
+                
+            })
+            .navigationViewStyle(StackNavigationViewStyle())
             .sheet(isPresented: $isSettingViewShow, onDismiss: {
                 WidgetCenter.shared.reloadAllTimelines()
             }, content: {
                 SetDateView(countdownVM: countdownVM)
             })
-            .padding()
-            .onAppear(
-                
-                
-        )
-        }
+        }//: NavigationView
     }
 }
 

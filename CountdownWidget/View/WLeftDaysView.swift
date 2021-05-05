@@ -25,7 +25,7 @@ struct WLeftDaysView: View {
                         Text(countdownVM.leftUnit)
                     }.font(.system(size: 11))
                     .opacity(0.7)
-                    .frame(width: geometry.size.width * 0.2)
+                    .frame(width: geometry.size.width * 0.22)
                     Text("\(countdownVM.left , specifier: "%0.1f")")
                         .font(.system(size: 40))
                         .fontWeight(.bold)

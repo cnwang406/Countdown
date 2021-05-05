@@ -7,7 +7,7 @@
 
 import SwiftUI
 import WidgetKit
-struct WElpasedView: View {
+struct WElapsedView: View {
     //MARK: - PROPERTIES
     @StateObject var countdownVM: CountdownViewModel
     //MARK: - BODY
@@ -45,7 +45,7 @@ struct WElpasedView: View {
 //MARK: - PREVIEW
 struct WElpasedView_Previews: PreviewProvider {
     static var previews: some View {
-        WElpasedView(countdownVM: CountdownViewModel())
+        WElapsedView(countdownVM: CountdownViewModel())
             .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }

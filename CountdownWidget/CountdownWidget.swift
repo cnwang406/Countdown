@@ -23,7 +23,7 @@ struct Provider: TimelineProvider {
 
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
-        for minuteOffset in 0 ..< 23 {
+        for minuteOffset in 0 ..< 5 {
             let entryDate = Calendar.current.date(byAdding: .minute, value: minuteOffset * 10, to: currentDate)!
             let entry = SimpleEntry(date: entryDate)
             entries.append(entry)
@@ -37,25 +37,31 @@ struct Provider: TimelineProvider {
 struct SimpleEntry: TimelineEntry {
     let date: Date
     
+    
 }
 
 struct CountdownWidgetEntryView : View {
     var entry: Provider.Entry
     @Environment(\.widgetFamily) var widgetFamily
     @StateObject var countdownVM = CountdownViewModel()
-
+    @State var counter: Int = 0
     var body: some View {
         ZStack{
-//            Text(entry.date, style: .time)
             Image("tesla")
                 .resizable()
                 .scaledToFit().opacity(0.3)
             WidgetProgressView()
                 .environmentObject(countdownVM)
+            HStack {
+                Text(entry.date, style: .time)
+                Text("\(counter)")
+            }.opacity(0.2)
+            .offset(y:60)
         }
         .onAppear(perform: {
             print("Widget onAppear")
         })
+        
     }
 }
 
