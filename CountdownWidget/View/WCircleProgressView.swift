@@ -39,7 +39,7 @@ struct WCircleProgressView: View {
                     .font(.system(size:  32.0))
                     .fontWeight(.bold)
                     .opacity(0.6)
-                Image("tesla-480")
+                Image("tesla.red")
                     .resizable()
                     .scaledToFit()
                     .frame(width:32)

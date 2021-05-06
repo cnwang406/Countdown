@@ -55,6 +55,7 @@ struct SetDateView: View {
                             
                         TextField("UNTITLED", text: $countdownVM.title)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
+                        
                     }
                     GroupBox(label: Text("說明")){
                         Text("有設定起始, 有設定結束 --> 顯示今天的百分比")

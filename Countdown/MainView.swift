@@ -8,7 +8,7 @@
 import SwiftUI
 import Foundation
 import WidgetKit
-struct ContentView: View {
+struct MainView: View {
     
     
     @State var isSettingViewShow: Bool = false
@@ -17,7 +17,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack{
-                Image("tesla-400")
+                Image("tesla.white")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 240, height: 240, alignment: .center)
@@ -59,8 +59,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        MainView()
     }
 }

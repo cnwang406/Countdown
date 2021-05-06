@@ -22,7 +22,7 @@ struct WElapsedView: View {
                     .background(Color.blue).opacity(0.8)
 //                    .offset(y:geometry.size.height * -0.4)
                 HStack(spacing:0){
-                    Image("tesla-480")
+                    Image("tesla.red")
                         .resizable()
                         .scaledToFit()
                         .frame(width:32)
@@ -50,7 +50,14 @@ struct WElapsedView: View {
 //MARK: - PREVIEW
 struct WElpasedView_Previews: PreviewProvider {
     static var previews: some View {
-        WElapsedView(countdownVM: CountdownViewModel())
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
+        Group{
+            WElapsedView(countdownVM: CountdownViewModel())
+                .previewContext(WidgetPreviewContext(family: .systemSmall))
+            WElapsedView(countdownVM: CountdownViewModel())
+                .previewContext(WidgetPreviewContext(family: .systemMedium))
+            WElapsedView(countdownVM: CountdownViewModel())
+                .previewContext(WidgetPreviewContext(family: .systemLarge))
+        }
+        
     }
 }
