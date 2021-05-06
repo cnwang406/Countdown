@@ -17,7 +17,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack{
-                Image("tesla")
+                Image("tesla-400")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 240, height: 240, alignment: .center)

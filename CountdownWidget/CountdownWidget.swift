@@ -47,9 +47,9 @@ struct CountdownWidgetEntryView : View {
     
     var body: some View {
         ZStack{
-            Image("tesla")
-                .resizable()
-                .scaledToFit().opacity(0.3)
+//            Image("tesla-400")
+//                .resizable()
+//                .scaledToFit().opacity(0.3)
             WidgetProgressView()
                 .environmentObject(countdownVM)
             if widgetFamily == .systemLarge {
@@ -57,8 +57,8 @@ struct CountdownWidgetEntryView : View {
                     Text(entry.date, style: .time)
                     Text(entry.date.description)
                     VStack{
-                    Text("\(countdownVM.dateFrom.description)")
-                    Text("\(countdownVM.dateTo.description)")
+//                    Text("\(countdownVM.dateFrom.description)")
+//                    Text("\(countdownVM.dateTo.description)")
                     }
 //                        .font(.footnote)
                 }.opacity(0.9)

@@ -60,8 +60,8 @@ struct DateDetailView: View {
                         WidgetCenter.shared.reloadAllTimelines()
                     }
             }
-            Text("\(countdownVM.dateFrom.description)")
-            Text("\(countdownVM.dateTo.description)")
+//            Text("\(countdownVM.dateFrom.description)")
+//            Text("\(countdownVM.dateTo.description)")
             
         }
         .padding()

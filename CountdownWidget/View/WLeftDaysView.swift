@@ -19,7 +19,11 @@ struct WLeftDaysView: View {
                         .font(.system(size: min(geometry.size.height, geometry.size.width) / CGFloat(countdownVM.title.count) / 6 * 10))
                     .background(Color.blue.opacity(0.1))
                     
-                HStack{
+                HStack(spacing:0){
+                    Image("tesla-480")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width:32)
                     VStack(alignment:.leading){
                         Text("Left")
                         Text(countdownVM.leftUnit)
@@ -27,7 +31,7 @@ struct WLeftDaysView: View {
                     .opacity(0.7)
                     .frame(width: geometry.size.width * 0.22)
                     Text("\(countdownVM.left , specifier: "%0.1f")")
-                        .font(.system(size: 40))
+                        .font(.system(size: 36))
                         .fontWeight(.bold)
                         .foregroundColor(countdownVM.leftUnit == "Hours" ? .red : .green)
                     
