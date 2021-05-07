@@ -36,6 +36,9 @@
 		27BD80A7263B05EE009A8DA9 /* CountdownWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BD80A6263B05EE009A8DA9 /* CountdownWidget.swift */; };
 		27BD80A9263B05F1009A8DA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27BD80A8263B05F1009A8DA9 /* Assets.xcassets */; };
 		27BD80AD263B05F1009A8DA9 /* CountdownWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 27BD809F263B05ED009A8DA9 /* CountdownWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		27C86D6C2645291F000D6889 /* SelectIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6702E26449DCC0058B31C /* SelectIconView.swift */; };
+		27C86D6D26452933000D6889 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6703326449E880058B31C /* DataModel.swift */; };
+		27C86D6E26452955000D6889 /* IconGridItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6703026449E100058B31C /* IconGridItemView.swift */; };
 		27C901DC263B701A00BB8BAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27BD808F263AF905009A8DA9 /* Assets.xcassets */; };
 		27C901DD263B709900BB8BAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27BD80A8263B05F1009A8DA9 /* Assets.xcassets */; };
 		27C901E1263B72D000BB8BAA /* CountdownViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C901E0263B72D000BB8BAA /* CountdownViewModel.swift */; };
@@ -146,6 +149,7 @@
 		27BD807F263AF903009A8DA9 = {
 			isa = PBXGroup;
 			children = (
+				27B7E22D263D6AEC00E3CE71 /* CountdownWidgetExtension.entitlements */,
 				27B6702D264427F70058B31C /* README.md */,
 				27BD808A263AF903009A8DA9 /* Countdown */,
 				27BD80A5263B05EE009A8DA9 /* CountdownWidget */,
@@ -200,7 +204,6 @@
 		27BD80A5263B05EE009A8DA9 /* CountdownWidget */ = {
 			isa = PBXGroup;
 			children = (
-				27B7E22D263D6AEC00E3CE71 /* CountdownWidgetExtension.entitlements */,
 				27B7E22F263E564600E3CE71 /* View */,
 				27BD80A6263B05EE009A8DA9 /* CountdownWidget.swift */,
 				27BD80A8263B05F1009A8DA9 /* Assets.xcassets */,
@@ -367,8 +370,10 @@
 				27B7E229263D66B800E3CE71 /* SetDateView.swift in Sources */,
 				27D7574F263BF76D00698900 /* CountdownViewModel.swift in Sources */,
 				27A9DEA9263C01F6005480AA /* UserDefaults+Extensions.swift in Sources */,
+				27C86D6C2645291F000D6889 /* SelectIconView.swift in Sources */,
 				27B7E22C263D677900E3CE71 /* WidgetProgressView.swift in Sources */,
 				27A9DEB0263CED38005480AA /* Date+Extensions.swift in Sources */,
+				27C86D6E26452955000D6889 /* IconGridItemView.swift in Sources */,
 				27D57D01263D3C1A00C92460 /* CircleProgressView.swift in Sources */,
 				27B7E237263E631000E3CE71 /* WLeftDaysView.swift in Sources */,
 				27B7E226263D421600E3CE71 /* LeftDaysView.swift in Sources */,
@@ -377,6 +382,7 @@
 				27A9DEB3263CF4C7005480AA /* DateDetailView.swift in Sources */,
 				27B7E233263E577100E3CE71 /* WCircleProgressView.swift in Sources */,
 				27B7E227263D453900E3CE71 /* ElapsedView.swift in Sources */,
+				27C86D6D26452933000D6889 /* DataModel.swift in Sources */,
 				27A9DEB6263CF858005480AA /* CountdownProgressView.swift in Sources */,
 				27B7E235263E5D8A00E3CE71 /* WElapsedView.swift in Sources */,
 			);

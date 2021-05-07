@@ -11,7 +11,7 @@ struct SetDateView: View {
     //MARK: - PROPERTIES
     @Environment(\.presentationMode) var presentationMode
     @StateObject var countdownVM: CountdownViewModel
-
+    @State var isSelectIconShow: Bool = false
     @State var message: String = "ERROR"
     func sav_e(){
         UserDefaults(suiteName: "group.com.cnwang")?.setValue(countdownVM.dateFrom, forKey: "dateFrom")
@@ -55,8 +55,15 @@ struct SetDateView: View {
                             
                         TextField("UNTITLED", text: $countdownVM.title)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
-                        
+                        Image(countdownVM.iconName)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 24, height: 24, alignment: .center)
+                            .onTapGesture {
+                                isSelectIconShow.toggle()
+                            }
                     }
+                    
                     GroupBox(label: Text("說明")){
                         Text("有設定起始, 有設定結束 --> 顯示今天的百分比")
                         Text("無設定起始, 有設定結束 --> 顯示剩餘的天數")
@@ -97,6 +104,9 @@ struct SetDateView: View {
             }
             .navigationTitle("Setting Dates")
         }
+        .sheet(isPresented: $isSelectIconShow, onDismiss: {}, content: {
+                SelectIconView(countdownVM: countdownVM)
+        })
     }
 }
 

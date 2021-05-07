@@ -45,5 +45,11 @@ extension UserDefaults {
         }
         return value
     }
+    var iconName: String{
+        guard let value = self.value(forKey: "icon") as? String else {
+            return  "tesla.red"
+        }
+        return value
+    }
     
 }

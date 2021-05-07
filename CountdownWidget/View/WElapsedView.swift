@@ -22,7 +22,7 @@ struct WElapsedView: View {
                     .background(Color.blue).opacity(0.8)
 //                    .offset(y:geometry.size.height * -0.4)
                 HStack(spacing:0){
-                    Image("tesla.red")
+                    Image(countdownVM.iconName)
                         .resizable()
                         .scaledToFit()
                         .frame(width:32)

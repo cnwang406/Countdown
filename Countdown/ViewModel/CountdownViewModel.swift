@@ -14,6 +14,7 @@ class CountdownViewModel: ObservableObject{
     @Published var dateFromEnabled: Bool
     @Published var dateToEnabled: Bool
     @Published var title: String
+    @Published var iconName: String
     
     
     
@@ -53,6 +54,7 @@ class CountdownViewModel: ObservableObject{
         self.dateFromEnabled = UserDefaults(suiteName: "group.com.cnwang")?.dateFromEnabled ?? false
         self.dateToEnabled =  UserDefaults(suiteName: "group.com.cnwang")?.dateToEnabled ?? true
         self.title = UserDefaults(suiteName: "group.com.cnwang")?.title ?? "UNTITLED"
+        self.iconName = UserDefaults(suiteName: "group.com.cnwang")?.iconName ?? "tesla.red"
 //        self.leftUnit = UserDefaults(suiteName: "group.com.cnwang")?.leftUnit ?? "*Days"
 //        self.elapsedUnit = UserDefaults(suiteName: "group.com.cnwang")?.elapsedUnit ?? "*Days"
         print ("CountdownVM init()")
@@ -63,6 +65,7 @@ class CountdownViewModel: ObservableObject{
         UserDefaults(suiteName: "group.com.cnwang")?.setValue(self.dateFromEnabled, forKey: "dateFromEnabled")
         UserDefaults(suiteName: "group.com.cnwang")?.setValue(self.dateToEnabled, forKey: "dateToEnabled")
         UserDefaults(suiteName: "group.com.cnwang")?.setValue(self.title, forKey: "title")
+        UserDefaults(suiteName: "group.com.cnwang")?.setValue(self.iconName, forKey: "icon")
         print ("CountdownVM save()")
     }
     

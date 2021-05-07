@@ -65,7 +65,7 @@ struct DateDetailView: View {
             
         }
         .padding()
-        .frame(width: 350, height: 110, alignment: .center)
+        
         
     }
 }

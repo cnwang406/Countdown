@@ -20,7 +20,7 @@ struct WLeftDaysView: View {
                     .background(Color.blue.opacity(0.1))
                     
                 HStack(spacing:0){
-                    Image("tesla.red")
+                    Image(countdownVM.iconName)
                         .resizable()
                         .scaledToFit()
                         .frame(width:32)

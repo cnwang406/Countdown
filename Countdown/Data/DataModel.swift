@@ -7,7 +7,22 @@
 
 import Foundation
 
-var icons: [String] = [
+struct IconData: Identifiable, Codable {
+    var id = UUID()
+    var name: String
+}
+
+var icons: [IconData] {
+    var iconstmp = [IconData]()
+    iconsname.forEach { name in
+        let icon = IconData(name: name)
+        iconstmp.append(icon)
+    }
+    return iconstmp
+}
+
+
+var iconsname: [String] = [
     "tesla.white", "tesla.red", "exam",
     "tesla.white", "tesla.red", "exam",
     "tesla.white", "tesla.red", "exam",

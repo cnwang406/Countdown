@@ -9,32 +9,76 @@ import SwiftUI
 
 struct SelectIconView: View {
     //MARK: - PROPERTIES
-    @State private var gridLayout: [GridItem] = [GridItem(.flexible())]
-    @State private var gridColumn: Int = 1
-    let haptic = UIImpactFeedbackGenerator(style: .medium)
+    var gridLayout: [GridItem]{
+        return Array(repeating: GridItem(.flexible(), spacing: 10), count: 6)
+    }
+    @State var selectedIcon = IconData(name: "tesla.white")
+    
+    @Environment(\.presentationMode) var presentationMode
+    @StateObject var countdownVM: CountdownViewModel
+    
+    //        let haptic = UIImpactFeedbackGenerator(style: .medium)
     //MARK: - BODY
+    /// <#Description#>
     var body: some View {
-        ScrollView(.vertical, showsIndicators: false){
+        GeometryReader { geometry in
             
-            LazyVGrid(columns: gridLayout, alignment: .center, spacing: 10){
-                ForEach(icons, id:\.self) {icon in
-                    IconGridItemView(icon: icon)
+            
+            NavigationView {
+                VStack (alignment: .center){
+                    HStack{
+                        Text("Selected ")
+                        Image(countdownVM.iconName )
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width:24, height:24)
+                    }
+                    ScrollView(.vertical, showsIndicators: false){
+                        LazyVGrid(columns: gridLayout, alignment: .center, spacing: 10, pinnedViews: []){
+                            ForEach(icons, id: \.id) {icon in
+                                IconGridItemView(icon: icon)
+                                    .onTapGesture {
+                                        print (icon.name)
+                                        countdownVM.iconName = icon.name
+                                        countdownVM.save()
+                                    }
+                            }
+                        }
+                        
+                        .padding(10)
+                        .animation(.easeInOut(duration: 1.0))
+                        .frame(width: 24 * 6 + 10 * 5 , height: 90, alignment: .center)
+                    }
+                    
                 }
-            }//: grid
-            .padding(10)
-            .animation(.easeInOut(duration: 1.0))
+                .toolbar(content: {
+                    ToolbarItem(placement: .principal, content: {
+                                    Text("Select Icon")
+                    })
+                    ToolbarItem(placement: .navigationBarTrailing, content: {
+                        Button(action: {
+                            
+                            presentationMode.wrappedValue.dismiss()
+                        }, label: {
+                            Image(systemName: "gear")
+                        })
+                    })
+                    
+                })
+            }
+            
         }
-        .onAppear(perform: {
-            gridLayout = Array(repeating: .init(.flexible()), count: gridLayout.count % 3 + 1)
-        })
-//        .frame(width: 100, height: 30, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+        
+        
     }
 }
+
 
 
 //MARK: - PREVIEW
 struct SelectIconView_Previews: PreviewProvider {
     static var previews: some View {
-        SelectIconView()
+        SelectIconView(countdownVM: CountdownViewModel())
+        
     }
 }

@@ -30,7 +30,7 @@ struct MainView: View {
                 
                 Spacer()
                 DateDetailView(countdownVM: countdownVM)
-                
+                Spacer()
                 
             }
             
