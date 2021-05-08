@@ -24,9 +24,6 @@ var icons: [IconData] {
 
 var iconsname: [String] = [
     "tesla.white", "tesla.red", "exam",
-    "tesla.white", "tesla.red", "exam",
-    "tesla.white", "tesla.red", "exam",
-    "tesla.white", "tesla.red", "exam",
-    "tesla.white", "tesla.red", "exam",
-    "tesla.white", "tesla.red", "exam"
+    "bookmark","clock"
+    ,"contacts","edit","dribbble","edit","home","idea","key","music","speech-bubble"
 ]

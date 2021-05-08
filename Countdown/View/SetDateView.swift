@@ -26,9 +26,9 @@ struct SetDateView: View {
         
         NavigationView{
             VStack{
-                Section(header: Text("設定起始/結束 日期")){
+                Section(header: Text("Set FROM / TO date")){
                     Toggle(isOn: $countdownVM.dateFromEnabled, label: {
-                        Text("起始")
+                        Text("FROM")
                     })
                     .onChange(of: countdownVM.dateFromEnabled, perform: { value in
                         if !countdownVM.dateToEnabled && !countdownVM.dateFromEnabled {
@@ -40,7 +40,7 @@ struct SetDateView: View {
                         .disabled(!countdownVM.dateFromEnabled)
                     
                     Toggle(isOn: $countdownVM.dateToEnabled, label: {
-                        Text("結束")
+                        Text("TO")
                     })
                     .onChange(of: countdownVM.dateToEnabled, perform: { value in
                         if !countdownVM.dateToEnabled && !countdownVM.dateFromEnabled {
@@ -64,10 +64,10 @@ struct SetDateView: View {
                             }
                     }
                     
-                    GroupBox(label: Text("說明")){
-                        Text("有設定起始, 有設定結束 --> 顯示今天的百分比")
-                        Text("無設定起始, 有設定結束 --> 顯示剩餘的天數")
-                        Text("有設定起始, 無設定結束 --> 顯示已經過的天數")
+                    GroupBox(label: Text("Description")){
+                        Text("FROM set, TO set --> shows percentage")
+                        Text("FROM not set, TO set --> shows left days")
+                        Text("FROM set, TO not set --> shows elapsed days")
                     }
                     .font(.subheadline)
                     .padding(.horizontal, 2)

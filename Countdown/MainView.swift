@@ -38,7 +38,8 @@ struct MainView: View {
             
             .toolbar(content: {
                 ToolbarItem(placement: .principal, content: {
-                                Text("Countdown")
+                    Text(NSLocalizedString("Countdown Count", comment: "default"))
+                    
                 })
                 ToolbarItem(placement: .navigationBarTrailing, content: {
                     Button(action: {

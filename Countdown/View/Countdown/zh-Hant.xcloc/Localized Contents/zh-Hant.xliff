@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
+  <file original="Countdown/en.lproj/InfoPlist.strings" datatype="plaintext" source-language="en" target-language="zh-Hant">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="12.5" build-num="12E262"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleName" xml:space="preserve">
+        <source>Countdown</source>
+        <note>Bundle name</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="CountdownWidget/en.lproj/InfoPlist.strings" datatype="plaintext" source-language="en" target-language="zh-Hant">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="12.5" build-num="12E262"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleDisplayName" xml:space="preserve">
+        <source>CountdownWidget</source>
+        <note>Bundle display name</note>
+      </trans-unit>
+      <trans-unit id="CFBundleGetInfoString" xml:space="preserve">
+        <source/>
+        <note>Get Info string</note>
+      </trans-unit>
+      <trans-unit id="CFBundleName" xml:space="preserve">
+        <source>CountdownWidgetExtension</source>
+        <note>Bundle name</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="en.lproj/Localizable.strings" source-language="en" target-language="zh-Hant" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="12.5" build-num="12E262"/>
+    </header>
+    <body>
+      <trans-unit id="%0.1f" xml:space="preserve">
+        <source>%0.1f</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="%0.1f%" xml:space="preserve">
+        <source>%1$.1f%2$</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="%@" xml:space="preserve">
+        <source>%@</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Countdown Count" xml:space="preserve">
+        <source>Countdown Count</source>
+        <note>default</note>
+      </trans-unit>
+      <trans-unit id="El'd" xml:space="preserve">
+        <source>El'd</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Elapsed" xml:space="preserve">
+        <source>Elapsed</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Finish" xml:space="preserve">
+        <source>Finish</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="From" xml:space="preserve">
+        <source>From</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Left" xml:space="preserve">
+        <source>Left</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Select Icon" xml:space="preserve">
+        <source>Select Icon</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Selected " xml:space="preserve">
+        <source>Selected </source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Subject" xml:space="preserve">
+        <source>Subject</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="To" xml:space="preserve">
+        <source>To</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="UNTITLED" xml:space="preserve">
+        <source>UNTITLED</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="w%@ h%@" xml:space="preserve">
+        <source>w%1$@ h%2$@</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="有設定起始, 有設定結束 --&gt; 顯示今天的百分比" xml:space="preserve">
+        <source>有設定起始, 有設定結束 --&gt; 顯示今天的百分比</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="有設定起始, 無設定結束 --&gt; 顯示已經過的天數" xml:space="preserve">
+        <source>有設定起始, 無設定結束 --&gt; 顯示已經過的天數</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="無設定起始, 有設定結束 --&gt; 顯示剩餘的天數" xml:space="preserve">
+        <source>無設定起始, 有設定結束 --&gt; 顯示剩餘的天數</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="結束" xml:space="preserve">
+        <source>結束</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="設定起始/結束 日期" xml:space="preserve">
+        <source>設定起始/結束 日期</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="說明" xml:space="preserve">
+        <source>說明</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="起始" xml:space="preserve">
+        <source>起始</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
