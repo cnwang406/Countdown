@@ -23,7 +23,8 @@ var icons: [IconData] {
 
 
 var iconsname: [String] = [
-    "tesla.white", "tesla.red", "exam",
-    "bookmark","clock"
-    ,"contacts","edit","dribbble","edit","home","idea","key","music","speech-bubble"
+    "airplane","banana","bicycle","birthday","bookmark","camping","checklist","clock","coffee-beans",
+    "coffee-maker","coffee","contacts","dribbble","edit","exam","food","hamper","home","hospital","idea",
+    "key","money","mountain","music","outdoor-swimming","restaurant","running","speech-bubble",
+    "street-food","tesla.red","tesla.white","toolbox","trash"
 ]

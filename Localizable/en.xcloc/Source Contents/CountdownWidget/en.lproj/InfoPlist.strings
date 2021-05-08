@@ -1,0 +1,6 @@
+/* Bundle display name */
+"CFBundleDisplayName" = "CountdownWidget";
+/* Get Info string */
+"CFBundleGetInfoString" = "";
+/* Bundle name */
+"CFBundleName" = "CountdownWidgetExtension";

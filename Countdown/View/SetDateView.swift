@@ -58,25 +58,24 @@ struct SetDateView: View {
                         Image(countdownVM.iconName)
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 24, height: 24, alignment: .center)
+                            .frame(width: 48, height: 48, alignment: .center)
                             .onTapGesture {
                                 isSelectIconShow.toggle()
                             }
                     }
                     
-                    GroupBox(label: Text("Description")){
-                        Text("FROM set, TO set --> shows percentage")
-                        Text("FROM not set, TO set --> shows left days")
-                        Text("FROM set, TO not set --> shows elapsed days")
-                    }
-                    .font(.subheadline)
-                    .padding(.horizontal, 2)
+                    SetDateDescriptionView()
                     
                     
                 } //: Section
                 .padding(.horizontal, 20)
                 .padding(.vertical, 10)
                 
+                Spacer()
+                Text(message)
+                    .font(.footnote)
+                    .fontWeight(.semibold)
+                    .foregroundColor(.white)
                 Spacer()
                 Button(action: {
                     if countdownVM.dateFrom.fullDistance(from: countdownVM.dateTo, resultIn: .hour) ?? 0 > 0 {
@@ -88,25 +87,35 @@ struct SetDateView: View {
                     }
                 }, label: {
                     Text("Finish")
+                        .font(.title)
                 })
-                
                 .padding(.horizontal,30)
                 .padding(.vertical,10)
-                .foregroundColor(.white)
-                .background(Color.blue)
-                .cornerRadius(10)
-                Text(message)
-                    .font(.footnote)
-                    .fontWeight(.semibold)
-                    .foregroundColor(.white)
+
                     
 //                    .animation(.interactiveSpring())
             }
-            .navigationTitle("Setting Dates")
-        }
+            .toolbar(content: {
+                ToolbarItem(placement: .principal, content: {
+                    Text("Setting Date")
+                        .font(.title)
+                })
+                ToolbarItem(placement: .navigationBarTrailing, content: {
+                    Button(action: {
+                        countdownVM.save()
+                        presentationMode.wrappedValue.dismiss()
+                    }, label: {
+                        Image(systemName: "arrow.turn.right.up")
+                    })
+                })
+                
+            }) //: toolbar
+//            .navigationTitle("Setting Dates")
+        } //: NavigationView
         .sheet(isPresented: $isSelectIconShow, onDismiss: {}, content: {
                 SelectIconView(countdownVM: countdownVM)
-        })
+            
+        }) //.sheet
     }
 }
 

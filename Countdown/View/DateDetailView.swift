@@ -12,10 +12,10 @@ struct DateDetailView: View {
     @StateObject var countdownVM: CountdownViewModel
     //MARK: - BODY
     var body: some View {
-        VStack{
+        VStack(spacing: 10){
             HStack {
                 //            Text ("From")
-                Spacer()
+                
                 //            Text(countdownVM.dateFrom.toString())
                 DatePicker("Start from", selection: $countdownVM.dateFrom)
                     .foregroundColor(countdownVM.dateFromEnabled ? .blue : .gray)
@@ -37,10 +37,10 @@ struct DateDetailView: View {
                 
                 
             }
-            Spacer()
-            HStack {
+//            Spacer()
+            HStack (spacing: 10){
                 //                Text ("To")
-                Spacer()
+//                Spacer()
                 //                Text(countdownVM.dateTo.toString())
                 DatePicker("End at", selection: $countdownVM.dateTo)
                     .foregroundColor(countdownVM.dateToEnabled ? .blue : .gray)
@@ -59,7 +59,9 @@ struct DateDetailView: View {
                         countdownVM.save()
                         WidgetCenter.shared.reloadAllTimelines()
                     }
+//                Spacer()
             }
+            
 //            Text("\(countdownVM.dateFrom.description)")
 //            Text("\(countdownVM.dateTo.description)")
             

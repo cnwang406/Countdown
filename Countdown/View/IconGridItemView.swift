@@ -15,7 +15,7 @@ struct IconGridItemView: View {
         Image(icon.name)
             .resizable()
             .scaledToFit()
-            .frame(width: 24)
+            .frame(width: 32)
     }
 }
 
