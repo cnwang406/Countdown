@@ -28,12 +28,36 @@
         <source>%@</source>
         <note>No comment provided by engineer.</note>
       </trans-unit>
+      <trans-unit id="Close" xml:space="preserve">
+        <source>Close</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
       <trans-unit id="Countdown Count" xml:space="preserve">
         <source>Countdown Count</source>
         <note>default</note>
       </trans-unit>
+      <trans-unit id="Description" xml:space="preserve">
+        <source>Description</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
       <trans-unit id="Elapsed" xml:space="preserve">
         <source>Elapsed</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="FROM" xml:space="preserve">
+        <source>FROM</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="FROM not set, TO set --&gt; shows left days" xml:space="preserve">
+        <source>FROM not set, TO set --&gt; shows left days</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="FROM set, TO not set --&gt; shows elapsed days" xml:space="preserve">
+        <source>FROM set, TO not set --&gt; shows elapsed days</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="FROM set, TO set --&gt; shows percentage" xml:space="preserve">
+        <source>FROM set, TO set --&gt; shows percentage</source>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Finish" xml:space="preserve">
@@ -52,12 +76,20 @@
         <source>Select Icon</source>
         <note>No comment provided by engineer.</note>
       </trans-unit>
-      <trans-unit id="Selected " xml:space="preserve">
-        <source>Selected </source>
+      <trans-unit id="Set FROM / TO date" xml:space="preserve">
+        <source>Set FROM / TO date</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Setting Date" xml:space="preserve">
+        <source>Setting Date</source>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Subject" xml:space="preserve">
         <source>Subject</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="TO" xml:space="preserve">
+        <source>TO</source>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="To" xml:space="preserve">
@@ -70,34 +102,6 @@
       </trans-unit>
       <trans-unit id="w%@ h%@" xml:space="preserve">
         <source>w%1$@ h%2$@</source>
-        <note>No comment provided by engineer.</note>
-      </trans-unit>
-      <trans-unit id="有設定起始, 有設定結束 --&gt; 顯示今天的百分比" xml:space="preserve">
-        <source>有設定起始, 有設定結束 --&gt; 顯示今天的百分比</source>
-        <note>No comment provided by engineer.</note>
-      </trans-unit>
-      <trans-unit id="有設定起始, 無設定結束 --&gt; 顯示已經過的天數" xml:space="preserve">
-        <source>有設定起始, 無設定結束 --&gt; 顯示已經過的天數</source>
-        <note>No comment provided by engineer.</note>
-      </trans-unit>
-      <trans-unit id="無設定起始, 有設定結束 --&gt; 顯示剩餘的天數" xml:space="preserve">
-        <source>無設定起始, 有設定結束 --&gt; 顯示剩餘的天數</source>
-        <note>No comment provided by engineer.</note>
-      </trans-unit>
-      <trans-unit id="結束" xml:space="preserve">
-        <source>結束</source>
-        <note>No comment provided by engineer.</note>
-      </trans-unit>
-      <trans-unit id="設定起始/結束 日期" xml:space="preserve">
-        <source>設定起始/結束 日期</source>
-        <note>No comment provided by engineer.</note>
-      </trans-unit>
-      <trans-unit id="說明" xml:space="preserve">
-        <source>說明</source>
-        <note>No comment provided by engineer.</note>
-      </trans-unit>
-      <trans-unit id="起始" xml:space="preserve">
-        <source>起始</source>
         <note>No comment provided by engineer.</note>
       </trans-unit>
     </body>
@@ -138,9 +142,17 @@
         <source>%@</source>
         <note>No comment provided by engineer.</note>
       </trans-unit>
+      <trans-unit id="Close" xml:space="preserve">
+        <source>Close</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
       <trans-unit id="Countdown Count" xml:space="preserve">
         <source>Countdown Count</source>
         <note>default</note>
+      </trans-unit>
+      <trans-unit id="Description" xml:space="preserve">
+        <source>Description</source>
+        <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="El'd" xml:space="preserve">
         <source>El'd</source>
@@ -148,6 +160,22 @@
       </trans-unit>
       <trans-unit id="Elapsed" xml:space="preserve">
         <source>Elapsed</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="FROM" xml:space="preserve">
+        <source>FROM</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="FROM not set, TO set --&gt; shows left days" xml:space="preserve">
+        <source>FROM not set, TO set --&gt; shows left days</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="FROM set, TO not set --&gt; shows elapsed days" xml:space="preserve">
+        <source>FROM set, TO not set --&gt; shows elapsed days</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="FROM set, TO set --&gt; shows percentage" xml:space="preserve">
+        <source>FROM set, TO set --&gt; shows percentage</source>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Finish" xml:space="preserve">
@@ -166,12 +194,20 @@
         <source>Select Icon</source>
         <note>No comment provided by engineer.</note>
       </trans-unit>
-      <trans-unit id="Selected " xml:space="preserve">
-        <source>Selected </source>
+      <trans-unit id="Set FROM / TO date" xml:space="preserve">
+        <source>Set FROM / TO date</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Setting Date" xml:space="preserve">
+        <source>Setting Date</source>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Subject" xml:space="preserve">
         <source>Subject</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="TO" xml:space="preserve">
+        <source>TO</source>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="To" xml:space="preserve">
@@ -184,34 +220,6 @@
       </trans-unit>
       <trans-unit id="w%@ h%@" xml:space="preserve">
         <source>w%1$@ h%2$@</source>
-        <note>No comment provided by engineer.</note>
-      </trans-unit>
-      <trans-unit id="有設定起始, 有設定結束 --&gt; 顯示今天的百分比" xml:space="preserve">
-        <source>有設定起始, 有設定結束 --&gt; 顯示今天的百分比</source>
-        <note>No comment provided by engineer.</note>
-      </trans-unit>
-      <trans-unit id="有設定起始, 無設定結束 --&gt; 顯示已經過的天數" xml:space="preserve">
-        <source>有設定起始, 無設定結束 --&gt; 顯示已經過的天數</source>
-        <note>No comment provided by engineer.</note>
-      </trans-unit>
-      <trans-unit id="無設定起始, 有設定結束 --&gt; 顯示剩餘的天數" xml:space="preserve">
-        <source>無設定起始, 有設定結束 --&gt; 顯示剩餘的天數</source>
-        <note>No comment provided by engineer.</note>
-      </trans-unit>
-      <trans-unit id="結束" xml:space="preserve">
-        <source>結束</source>
-        <note>No comment provided by engineer.</note>
-      </trans-unit>
-      <trans-unit id="設定起始/結束 日期" xml:space="preserve">
-        <source>設定起始/結束 日期</source>
-        <note>No comment provided by engineer.</note>
-      </trans-unit>
-      <trans-unit id="說明" xml:space="preserve">
-        <source>說明</source>
-        <note>No comment provided by engineer.</note>
-      </trans-unit>
-      <trans-unit id="起始" xml:space="preserve">
-        <source>起始</source>
         <note>No comment provided by engineer.</note>
       </trans-unit>
     </body>

@@ -12,7 +12,7 @@ struct MainView: View {
     
     
     @State var isSettingViewShow: Bool = false
-    
+    @State var isAboutViewShow: Bool = false
     @StateObject var countdownVM: CountdownViewModel = CountdownViewModel()
     var body: some View {
         NavigationView {
@@ -38,7 +38,8 @@ struct MainView: View {
             
             .toolbar(content: {
                 ToolbarItem(placement: .principal, content: {
-                    Text(NSLocalizedString("Countdown Count", comment: "default"))
+                    Text(NSLocalizedString("Countdown", comment: "default"))
+                        .font(.title)
                     
                 })
                 ToolbarItem(placement: .navigationBarTrailing, content: {
@@ -48,6 +49,14 @@ struct MainView: View {
                         Image(systemName: "gear")
                     })
                 })
+                ToolbarItem(placement: .navigationBarLeading, content: {
+                    Button(action: {
+                        isAboutViewShow.toggle()
+                    }, label: {
+                        Image(systemName: "info")
+                    })
+                })
+
                 
             })
             .navigationViewStyle(StackNavigationViewStyle())
@@ -56,6 +65,12 @@ struct MainView: View {
             }, content: {
                 SetDateView(countdownVM: countdownVM)
             })
+            .sheet(isPresented: $isAboutViewShow, onDismiss: {
+                WidgetCenter.shared.reloadAllTimelines()
+            }, content: {
+                AboutView()
+            })
+
         }//: NavigationView
     }
 }

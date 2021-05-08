@@ -32,14 +32,44 @@
         <target>%@</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
+      <trans-unit id="Close" xml:space="preserve">
+        <source>Close</source>
+        <target>Close</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
       <trans-unit id="Countdown Count" xml:space="preserve">
         <source>Countdown Count</source>
         <target>Countdown Count</target>
         <note>default</note>
       </trans-unit>
+      <trans-unit id="Description" xml:space="preserve">
+        <source>Description</source>
+        <target>Description</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
       <trans-unit id="Elapsed" xml:space="preserve">
         <source>Elapsed</source>
         <target>Elapsed</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="FROM" xml:space="preserve">
+        <source>FROM</source>
+        <target>FROM</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="FROM not set, TO set --&gt; shows left days" xml:space="preserve">
+        <source>FROM not set, TO set --&gt; shows left days</source>
+        <target>FROM not set, TO set --&gt; shows left days</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="FROM set, TO not set --&gt; shows elapsed days" xml:space="preserve">
+        <source>FROM set, TO not set --&gt; shows elapsed days</source>
+        <target>FROM set, TO not set --&gt; shows elapsed days</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="FROM set, TO set --&gt; shows percentage" xml:space="preserve">
+        <source>FROM set, TO set --&gt; shows percentage</source>
+        <target>FROM set, TO set --&gt; shows percentage</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Finish" xml:space="preserve">
@@ -62,14 +92,24 @@
         <target>Select Icon</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
-      <trans-unit id="Selected " xml:space="preserve">
-        <source>Selected </source>
-        <target>Selected </target>
+      <trans-unit id="Set FROM / TO date" xml:space="preserve">
+        <source>Set FROM / TO date</source>
+        <target>Set FROM / TO date</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Setting Date" xml:space="preserve">
+        <source>Setting Date</source>
+        <target>Setting Date</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Subject" xml:space="preserve">
         <source>Subject</source>
         <target>Subject</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="TO" xml:space="preserve">
+        <source>TO</source>
+        <target>TO</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="To" xml:space="preserve">
@@ -85,41 +125,6 @@
       <trans-unit id="w%@ h%@" xml:space="preserve">
         <source>w%1$@ h%2$@</source>
         <target>w%1$@ h%2$@</target>
-        <note>No comment provided by engineer.</note>
-      </trans-unit>
-      <trans-unit id="有設定起始, 有設定結束 --&gt; 顯示今天的百分比" xml:space="preserve">
-        <source>有設定起始, 有設定結束 --&gt; 顯示今天的百分比</source>
-        <target>有設定起始, 有設定結束 --&gt; 顯示今天的百分比</target>
-        <note>No comment provided by engineer.</note>
-      </trans-unit>
-      <trans-unit id="有設定起始, 無設定結束 --&gt; 顯示已經過的天數" xml:space="preserve">
-        <source>有設定起始, 無設定結束 --&gt; 顯示已經過的天數</source>
-        <target>有設定起始, 無設定結束 --&gt; 顯示已經過的天數</target>
-        <note>No comment provided by engineer.</note>
-      </trans-unit>
-      <trans-unit id="無設定起始, 有設定結束 --&gt; 顯示剩餘的天數" xml:space="preserve">
-        <source>無設定起始, 有設定結束 --&gt; 顯示剩餘的天數</source>
-        <target>無設定起始, 有設定結束 --&gt; 顯示剩餘的天數</target>
-        <note>No comment provided by engineer.</note>
-      </trans-unit>
-      <trans-unit id="結束" xml:space="preserve">
-        <source>結束</source>
-        <target>結束</target>
-        <note>No comment provided by engineer.</note>
-      </trans-unit>
-      <trans-unit id="設定起始/結束 日期" xml:space="preserve">
-        <source>設定起始/結束 日期</source>
-        <target>設定起始/結束 日期</target>
-        <note>No comment provided by engineer.</note>
-      </trans-unit>
-      <trans-unit id="說明" xml:space="preserve">
-        <source>說明</source>
-        <target>說明</target>
-        <note>No comment provided by engineer.</note>
-      </trans-unit>
-      <trans-unit id="起始" xml:space="preserve">
-        <source>起始</source>
-        <target>起始</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
     </body>
@@ -166,10 +171,20 @@
         <target>%@</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
+      <trans-unit id="Close" xml:space="preserve">
+        <source>Close</source>
+        <target>Close</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
       <trans-unit id="Countdown Count" xml:space="preserve">
         <source>Countdown Count</source>
         <target>Countdown Count</target>
         <note>default</note>
+      </trans-unit>
+      <trans-unit id="Description" xml:space="preserve">
+        <source>Description</source>
+        <target>Description</target>
+        <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="El'd" xml:space="preserve">
         <source>El'd</source>
@@ -179,6 +194,26 @@
       <trans-unit id="Elapsed" xml:space="preserve">
         <source>Elapsed</source>
         <target>Elapsed</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="FROM" xml:space="preserve">
+        <source>FROM</source>
+        <target>FROM</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="FROM not set, TO set --&gt; shows left days" xml:space="preserve">
+        <source>FROM not set, TO set --&gt; shows left days</source>
+        <target>FROM not set, TO set --&gt; shows left days</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="FROM set, TO not set --&gt; shows elapsed days" xml:space="preserve">
+        <source>FROM set, TO not set --&gt; shows elapsed days</source>
+        <target>FROM set, TO not set --&gt; shows elapsed days</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="FROM set, TO set --&gt; shows percentage" xml:space="preserve">
+        <source>FROM set, TO set --&gt; shows percentage</source>
+        <target>FROM set, TO set --&gt; shows percentage</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Finish" xml:space="preserve">
@@ -201,14 +236,24 @@
         <target>Select Icon</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
-      <trans-unit id="Selected " xml:space="preserve">
-        <source>Selected </source>
-        <target>Selected </target>
+      <trans-unit id="Set FROM / TO date" xml:space="preserve">
+        <source>Set FROM / TO date</source>
+        <target>Set FROM / TO date</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Setting Date" xml:space="preserve">
+        <source>Setting Date</source>
+        <target>Setting Date</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Subject" xml:space="preserve">
         <source>Subject</source>
         <target>Subject</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="TO" xml:space="preserve">
+        <source>TO</source>
+        <target>TO</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="To" xml:space="preserve">
@@ -224,41 +269,6 @@
       <trans-unit id="w%@ h%@" xml:space="preserve">
         <source>w%1$@ h%2$@</source>
         <target>w%1$@ h%2$@</target>
-        <note>No comment provided by engineer.</note>
-      </trans-unit>
-      <trans-unit id="有設定起始, 有設定結束 --&gt; 顯示今天的百分比" xml:space="preserve">
-        <source>有設定起始, 有設定結束 --&gt; 顯示今天的百分比</source>
-        <target>有設定起始, 有設定結束 --&gt; 顯示今天的百分比</target>
-        <note>No comment provided by engineer.</note>
-      </trans-unit>
-      <trans-unit id="有設定起始, 無設定結束 --&gt; 顯示已經過的天數" xml:space="preserve">
-        <source>有設定起始, 無設定結束 --&gt; 顯示已經過的天數</source>
-        <target>有設定起始, 無設定結束 --&gt; 顯示已經過的天數</target>
-        <note>No comment provided by engineer.</note>
-      </trans-unit>
-      <trans-unit id="無設定起始, 有設定結束 --&gt; 顯示剩餘的天數" xml:space="preserve">
-        <source>無設定起始, 有設定結束 --&gt; 顯示剩餘的天數</source>
-        <target>無設定起始, 有設定結束 --&gt; 顯示剩餘的天數</target>
-        <note>No comment provided by engineer.</note>
-      </trans-unit>
-      <trans-unit id="結束" xml:space="preserve">
-        <source>結束</source>
-        <target>結束</target>
-        <note>No comment provided by engineer.</note>
-      </trans-unit>
-      <trans-unit id="設定起始/結束 日期" xml:space="preserve">
-        <source>設定起始/結束 日期</source>
-        <target>設定起始/結束 日期</target>
-        <note>No comment provided by engineer.</note>
-      </trans-unit>
-      <trans-unit id="說明" xml:space="preserve">
-        <source>說明</source>
-        <target>說明</target>
-        <note>No comment provided by engineer.</note>
-      </trans-unit>
-      <trans-unit id="起始" xml:space="preserve">
-        <source>起始</source>
-        <target>起始</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
     </body>

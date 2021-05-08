@@ -1,0 +1,73 @@
+/*
+  Localizable.strings
+  Countdown
+
+  Created by cnwang on 2021/5/8.
+  
+*/
+/* No comment provided by engineer. */
+"%0.1f" = "%0.1f";
+
+/* No comment provided by engineer. */
+"%0.1f%" = "%1$.1f%2$";
+
+/* No comment provided by engineer. */
+"%@" = "%@";
+
+/* No comment provided by engineer. */
+"Close" = "關閉";
+
+/* default */
+"Countdown" = "Countdown";
+
+/* No comment provided by engineer. */
+"Description" = "說明";
+
+/* No comment provided by engineer. */
+"Elapsed" = "已過";
+
+/* No comment provided by engineer. */
+"Finish" = "完成";
+
+/* No comment provided by engineer. */
+"From" = "自";
+
+/* No comment provided by engineer. */
+"FROM" = "設定 開始";
+
+/* No comment provided by engineer. */
+"FROM not set, TO set --> shows left days" = "[開始]有設定， [結束]沒設定 --> 顯示 已過天數";
+
+/* No comment provided by engineer. */
+"FROM set, TO not set --> shows elapsed days" = "[開始]有設定， [結束]有設定 --> 顯示 已過的百分比";
+
+/* No comment provided by engineer. */
+"FROM set, TO set --> shows percentage" = "[開始]沒設定， [結束]有設定 --> 顯示 剩餘天數";
+
+/* No comment provided by engineer. */
+"Left" = "剩下";
+
+/* No comment provided by engineer. */
+"Select Icon" = "選擇圖案";
+
+/* No comment provided by engineer. */
+"Set FROM / TO date" = "設定 開始/結束 日期";
+
+/* No comment provided by engineer. */
+"Setting Date" = "設定日期";
+
+/* No comment provided by engineer. */
+"Subject" = "主題";
+
+/* No comment provided by engineer. */
+"To" = "結束";
+
+/* No comment provided by engineer. */
+"TO" = "設定 結束";
+
+/* No comment provided by engineer. */
+"UNTITLED" = "未命名";
+
+/* No comment provided by engineer. */
+"w%@ h%@" = "w%1$@ h%2$@";
+

@@ -12,7 +12,7 @@ struct SetDateView: View {
     @Environment(\.presentationMode) var presentationMode
     @StateObject var countdownVM: CountdownViewModel
     @State var isSelectIconShow: Bool = false
-    @State var message: String = "ERROR"
+    @State var message: String = ""
     func sav_e(){
         UserDefaults(suiteName: "group.com.cnwang")?.setValue(countdownVM.dateFrom, forKey: "dateFrom")
         UserDefaults(suiteName: "group.com.cnwang")?.setValue(countdownVM.dateTo, forKey: "dateTo")
