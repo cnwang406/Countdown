@@ -27,9 +27,9 @@ struct WElapsedView: View {
 
                 Text(countdownVM.title  )
                     .fixedSize(horizontal: false, vertical: true)
-                    .font(.system(size: min(geometry.size.height, geometry.size.width) / CGFloat(countdownVM.title.count) / 6 * 8))
+                    .font(.system(size: min(geometry.size.height, geometry.size.width) / CGFloat(countdownVM.title.utf16.count) / 6 * 8))
                     .frame(width: geometry.size.width ,height: geometry.size.height * 0.40)
-                    .background(Color.blue.opacity(0.3))
+                    .background(Color.blue.opacity(0.1))
                 
 //                    .offset(y:geometry.size.height * -0.05)
                 

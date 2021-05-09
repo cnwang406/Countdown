@@ -15,34 +15,40 @@ struct PopupTextView: View {
     //MARK: - BODY
     var body: some View {
         ZStack {
+            
             RoundedRectangle(cornerRadius: 20)
-                .fill(Color.white)
+                .fill(Color.gray)
             VStack {
                 Text(title)
                     .font(.title)
                     .foregroundColor(.black)
                 
-                Divider()
-                
+                Spacer()
                 TextField(textEntered, text: $textEntered)
-                    .cornerRadius(5)
                     .padding(5)
-                    .background(Color.gray.opacity(0.2))
-                    .foregroundColor(.black)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+//                    .background(Color.gray.opacity(0.2))
+                    .foregroundColor(Color.accentColor)
                     .padding(.horizontal, 20)
                 
-                Divider()
+//                Divider()
+                Spacer()
                 
                 HStack {
-                    Button("OK") {
-                        self.showingAlert.toggle()
-                    }
+                    Button(action: {showingAlert.toggle()}
+                           , label: {
+                        Text("OK")
+                            .font(.title)
+                    })
+                    
+                    
                 }
                 .padding(30)
                 .padding(.horizontal, 40)
             }
         }
-        .frame(width: 300, height: 200)
+        
+        .frame(width: 320, height: 200)
     }
 }
 

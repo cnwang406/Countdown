@@ -50,7 +50,7 @@ class CountdownViewModel: ObservableObject{
 
     init(){
         self.dateFrom =  UserDefaults(suiteName: "group.com.cnwang")?.dateFrom ?? Date()
-        self.dateTo = UserDefaults(suiteName: "group.com.cnwang")?.dateTo ?? Date()
+        self.dateTo = UserDefaults(suiteName: "group.com.cnwang")?.dateTo ?? Calendar.current.date(byAdding: .day, value: 1, to: Date())!
         self.dateFromEnabled = UserDefaults(suiteName: "group.com.cnwang")?.dateFromEnabled ?? false
         self.dateToEnabled =  UserDefaults(suiteName: "group.com.cnwang")?.dateToEnabled ?? true
         self.title = UserDefaults(suiteName: "group.com.cnwang")?.title ?? "UNTITLED"

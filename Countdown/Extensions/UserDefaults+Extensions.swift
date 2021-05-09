@@ -16,7 +16,7 @@ extension UserDefaults {
     }
     var dateTo: Date {
         guard let value = self.value(forKey: "dateTo") as? Date else {
-            return Date()
+            return  Calendar.current.date(byAdding: .day, value: 1, to: Date())!
         }
         return value
     }

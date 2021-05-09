@@ -27,11 +27,14 @@ struct MainView: View {
                     .onTapGesture {
                         isSelectIconView.toggle()
                     }
+                
                 Text(countdownVM.title)
                     .font(.title)
                     .padding(.vertical,60)
                     .onTapGesture {
                         isChangeTitleView.toggle()
+                        countdownVM.save()
+                        WidgetCenter.shared.reloadAllTimelines()
                     }
                 
                 CountdownProgressView(countdownVM: countdownVM)
@@ -65,7 +68,7 @@ struct MainView: View {
                         Image(systemName: "info")
                     })
                 })
-
+                
                 
             })
             .navigationViewStyle(StackNavigationViewStyle())
@@ -79,13 +82,19 @@ struct MainView: View {
             }, content: {
                 AboutView()
             })
-            .sheet(isPresented: $isSelectIconView, onDismiss: {}, content: {
-                    SelectIconView(countdownVM: countdownVM)})
-            .sheet(isPresented: $isChangeTitleView, onDismiss: {}, content: {
+            .sheet(isPresented: $isSelectIconView, onDismiss: {
+                WidgetCenter.shared.reloadAllTimelines()
+            }, content: {
+                SelectIconView(countdownVM: countdownVM)})
+            
+            .sheet(isPresented: $isChangeTitleView, onDismiss: {
+                countdownVM.save()
+                WidgetCenter.shared.reloadAllTimelines()
+            }, content: {
                 PopupTextView(title: "Change Subject", textEntered: $countdownVM.title, showingAlert: $isChangeTitleView)
             })
-                
-
+            
+            
         }//: NavigationView
     }
 }

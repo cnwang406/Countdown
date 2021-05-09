@@ -45,7 +45,7 @@ struct WCircleProgressView: View {
                     .offset(y: 10)
                 Text(countdownVM.title )
                     .frame(width: geometry.size.width)
-                    .font(.system(size: min(geometry.size.height, geometry.size.width) / CGFloat(countdownVM.title.count) / 6 * 10))
+                    .font(.system(size: min(geometry.size.height, geometry.size.width) / CGFloat(countdownVM.title.utf16.count) / 6 * 8))
                     .background(Color.blue.opacity(0.1))
                     .offset(y:geometry.size.height * -0.36 )
                 Text("\(ratio * 100, specifier: "%0.1f")%")
