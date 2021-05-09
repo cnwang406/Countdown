@@ -53,9 +53,7 @@ struct WLeftDaysView: View {
 //            
 //            .frame(width: geometry.size.width * 0.99,  height:geometry.size.height * 0.99)
             
-        }.onAppear(perform: {
-            print ("WLeftDaysView .onAppear()")
-        })
+        }
     }
 }
 

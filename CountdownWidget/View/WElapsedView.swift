@@ -30,9 +30,7 @@ struct WElapsedView: View {
                     .font(.system(size: min(geometry.size.height, geometry.size.width) / CGFloat(countdownVM.title.utf16.count) / 6 * 8))
                     .frame(width: geometry.size.width ,height: geometry.size.height * 0.40)
                     .background(Color.blue.opacity(0.1))
-                
-//                    .offset(y:geometry.size.height * -0.05)
-                
+                               
                 HStack(spacing:0){
                     Image(countdownVM.iconName)
                         .resizable()

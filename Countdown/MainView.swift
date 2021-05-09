@@ -43,7 +43,6 @@ struct MainView: View {
                 
                 DateDetailView(countdownVM: countdownVM)
                 
-                
             }
             
             .padding()
