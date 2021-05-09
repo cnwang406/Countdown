@@ -13,24 +13,33 @@ struct MainView: View {
     
     @State var isSettingViewShow: Bool = false
     @State var isAboutViewShow: Bool = false
+    @State var isSelectIconView: Bool = false
+    @State var isChangeTitleView: Bool = false
     @StateObject var countdownVM: CountdownViewModel = CountdownViewModel()
     var body: some View {
         NavigationView {
             VStack{
-                Image("tesla.white")
+                Image(countdownVM.iconName)
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 240, height: 240, alignment: .center)
-                
+                    .frame(width: 120, height: 120, alignment: .center)
+                    .padding(.vertical,30)
+                    .onTapGesture {
+                        isSelectIconView.toggle()
+                    }
                 Text(countdownVM.title)
                     .font(.title)
-                    .padding()
+                    .padding(.vertical,60)
+                    .onTapGesture {
+                        isChangeTitleView.toggle()
+                    }
                 
                 CountdownProgressView(countdownVM: countdownVM)
+                    .padding(.vertical,30)
                 
-                Spacer()
+                
                 DateDetailView(countdownVM: countdownVM)
-                Spacer()
+                
                 
             }
             
@@ -38,7 +47,7 @@ struct MainView: View {
             
             .toolbar(content: {
                 ToolbarItem(placement: .principal, content: {
-                    Text(NSLocalizedString("Countdown", comment: "default"))
+                    Text(NSLocalizedString("Days Left", comment: "default"))
                         .font(.title)
                     
                 })
@@ -70,6 +79,12 @@ struct MainView: View {
             }, content: {
                 AboutView()
             })
+            .sheet(isPresented: $isSelectIconView, onDismiss: {}, content: {
+                    SelectIconView(countdownVM: countdownVM)})
+            .sheet(isPresented: $isChangeTitleView, onDismiss: {}, content: {
+                PopupTextView(title: "Change Subject", textEntered: $countdownVM.title, showingAlert: $isChangeTitleView)
+            })
+                
 
         }//: NavigationView
     }

@@ -15,59 +15,61 @@
 "%@" = "%@";
 
 /* No comment provided by engineer. */
-"Close" = "關閉";
+"Close" = "Close";
 
 /* default */
-"Countdown" = "Countdown";
+"Countdown Count" = "Countdown Count";
 
 /* No comment provided by engineer. */
-"Description" = "說明";
+"Description" = "Description";
 
 /* No comment provided by engineer. */
-"Elapsed" = "已過";
+"Elapsed" = "Elapsed";
 
 /* No comment provided by engineer. */
-"Finish" = "完成";
+"Finish" = "Finish";
 
 /* No comment provided by engineer. */
-"From" = "自";
+"From" = "From";
 
 /* No comment provided by engineer. */
-"FROM" = "設定 開始";
+"FROM" = "FROM";
 
 /* No comment provided by engineer. */
-"FROM not set, TO set --> shows left days" = "[開始]有設定， [結束]沒設定 --> 顯示 已過天數";
+"FROM not set, TO set --> shows left days" = "FROM not set, TO set --> shows left days";
 
 /* No comment provided by engineer. */
-"FROM set, TO not set --> shows elapsed days" = "[開始]有設定， [結束]有設定 --> 顯示 已過的百分比";
+"FROM set, TO not set --> shows elapsed days" = "FROM set, TO not set --> shows elapsed days";
 
 /* No comment provided by engineer. */
-"FROM set, TO set --> shows percentage" = "[開始]沒設定， [結束]有設定 --> 顯示 剩餘天數";
+"FROM set, TO set --> shows percentage" = "FROM set, TO set --> shows percentage";
 
 /* No comment provided by engineer. */
-"Left" = "剩下";
+"Left" = "Left";
 
 /* No comment provided by engineer. */
-"Select Icon" = "選擇圖案";
+"Select Icon" = "Select Icon";
 
 /* No comment provided by engineer. */
-"Set FROM / TO date" = "設定 開始/結束 日期";
+"Set FROM / TO date" = "Set FROM / TO date";
 
 /* No comment provided by engineer. */
-"Setting Date" = "設定日期";
+"Setting Date" = "Setting Date";
 
 /* No comment provided by engineer. */
-"Subject" = "主題";
+"Subject" = "Subject";
 
 /* No comment provided by engineer. */
-"To" = "結束";
+"To" = "To";
 
 /* No comment provided by engineer. */
-"TO" = "設定 結束";
+"TO" = "TO";
 
 /* No comment provided by engineer. */
-"UNTITLED" = "未命名";
+"UNTITLED" = "UNTITLED";
 
 /* No comment provided by engineer. */
 "w%@ h%@" = "w%1$@ h%2$@";
+
+
 

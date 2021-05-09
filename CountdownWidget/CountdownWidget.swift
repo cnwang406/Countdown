@@ -47,41 +47,25 @@ struct CountdownWidgetEntryView : View {
     
     var body: some View {
         ZStack{
-//            Image("tesla-400")
-//                .resizable()
-//                .scaledToFit().opacity(0.3)
             WidgetProgressView()
                 .environmentObject(countdownVM)
-            if widgetFamily == .systemLarge {
-                HStack {
-                    Text(entry.date, style: .time)
-                    Text(entry.date.description)
-                    VStack{
-//                    Text("\(countdownVM.dateFrom.description)")
-//                    Text("\(countdownVM.dateTo.description)")
-                    }
-//                        .font(.footnote)
-                }.opacity(0.9)
-                .offset(y: 90)
-            }
+            
+            
         } //:ZStack
-        .onAppear(perform: {
-            print("Widget onAppear")
-        })
         
     }
 }
 
 @main
 struct CountdownWidget: Widget {
-    let kind: String = "CountdownWidget"
+    let kind: String = "DaysLeft Widget"
     
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
             CountdownWidgetEntryView(entry: entry)
         }
-        .configurationDisplayName("Countdown Widget")
-        .description("Countdown Widget (only small, currently)")
+        .configurationDisplayName("DaysLeft Widget")
+        .description("DaysLeft Widget")
     }
 }
 

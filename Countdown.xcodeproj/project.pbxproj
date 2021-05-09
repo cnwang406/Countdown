@@ -47,6 +47,8 @@
 		27BD80A7263B05EE009A8DA9 /* CountdownWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BD80A6263B05EE009A8DA9 /* CountdownWidget.swift */; };
 		27BD80A9263B05F1009A8DA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27BD80A8263B05F1009A8DA9 /* Assets.xcassets */; };
 		27BD80AD263B05F1009A8DA9 /* CountdownWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 27BD809F263B05ED009A8DA9 /* CountdownWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		27C5420F2647C09A00EEF40B /* PopupTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C5420E2647C09A00EEF40B /* PopupTextView.swift */; };
+		27C542102647C1D900EEF40B /* PopupTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C5420E2647C09A00EEF40B /* PopupTextView.swift */; };
 		27C86D6C2645291F000D6889 /* SelectIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6702E26449DCC0058B31C /* SelectIconView.swift */; };
 		27C86D6D26452933000D6889 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6703326449E880058B31C /* DataModel.swift */; };
 		27C86D6E26452955000D6889 /* IconGridItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6703026449E100058B31C /* IconGridItemView.swift */; };
@@ -119,6 +121,7 @@
 		27BD80A6263B05EE009A8DA9 /* CountdownWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownWidget.swift; sourceTree = "<group>"; };
 		27BD80A8263B05F1009A8DA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27BD80AA263B05F1009A8DA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27C5420E2647C09A00EEF40B /* PopupTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupTextView.swift; sourceTree = "<group>"; };
 		27C901E0263B72D000BB8BAA /* CountdownViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownViewModel.swift; sourceTree = "<group>"; };
 		27D57CFF263D39DB00C92460 /* CircleProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgressView.swift; sourceTree = "<group>"; };
 		27D57D02263D3C4200C92460 /* ElapsedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElapsedView.swift; sourceTree = "<group>"; };
@@ -254,6 +257,7 @@
 				27D57CFF263D39DB00C92460 /* CircleProgressView.swift */,
 				27A805542646D6F200832260 /* AboutView.swift */,
 				27A805562646D79500832260 /* AboutDetailView */,
+				27C5420E2647C09A00EEF40B /* PopupTextView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -394,6 +398,7 @@
 				27A9DEB5263CF858005480AA /* CountdownProgressView.swift in Sources */,
 				27A8054A26469FB400832260 /* SetDateDescriptionView.swift in Sources */,
 				27D57D03263D3C4200C92460 /* ElapsedView.swift in Sources */,
+				27C5420F2647C09A00EEF40B /* PopupTextView.swift in Sources */,
 				27BD808C263AF903009A8DA9 /* CountdownApp.swift in Sources */,
 				27A9DEAF263CECEB005480AA /* Date+Extensions.swift in Sources */,
 				27A805582646D7B000832260 /* AboutRowView.swift in Sources */,
@@ -408,6 +413,7 @@
 			files = (
 				27A805602646DA5A00832260 /* AboutLevelView.swift in Sources */,
 				27B7E229263D66B800E3CE71 /* SetDateView.swift in Sources */,
+				27C542102647C1D900EEF40B /* PopupTextView.swift in Sources */,
 				27A8055E2646DA4B00832260 /* AboutView.swift in Sources */,
 				27D7574F263BF76D00698900 /* CountdownViewModel.swift in Sources */,
 				27A9DEA9263C01F6005480AA /* UserDefaults+Extensions.swift in Sources */,
@@ -591,7 +597,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.cnwang.Countdown;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cnwang.daysleft;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -616,7 +622,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.cnwang.Countdown;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cnwang.daysleft;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -638,7 +644,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.cnwang.Countdown.CountdownWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cnwang.daysleft.CdaysleftWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -661,7 +667,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.cnwang.Countdown.CountdownWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cnwang.daysleft.CdaysleftWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
