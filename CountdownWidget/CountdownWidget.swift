@@ -75,13 +75,21 @@ struct CountdownWidget_Previews: PreviewProvider {
         Group {
             CountdownWidgetEntryView(entry: SimpleEntry(date: Date()))
                 .previewContext(WidgetPreviewContext(family: .systemSmall))
-            //                .environmentObject(countdownVM)
-                        CountdownWidgetEntryView(entry: SimpleEntry(date: Date()))
-                            .previewContext(WidgetPreviewContext(family: .systemMedium))
+            CountdownWidgetEntryView(entry: SimpleEntry(date: Date()))
+                .previewContext(WidgetPreviewContext(family: .systemSmall))
+                .environment(\.colorScheme, .dark)
+            CountdownWidgetEntryView(entry: SimpleEntry(date: Date()))
+                .previewContext(WidgetPreviewContext(family: .systemMedium))
+            CountdownWidgetEntryView(entry: SimpleEntry(date: Date()))
+                .previewContext(WidgetPreviewContext(family: .systemMedium))
+                .environment(\.colorScheme, .dark)
             ////                .environmentObject(countdownVM)
-                        CountdownWidgetEntryView(entry: SimpleEntry(date: Date()))
-                            .previewContext(WidgetPreviewContext(family: .systemLarge))
-//                            .environmentObject(countdownVM)
+            CountdownWidgetEntryView(entry: SimpleEntry(date: Date()))
+                .previewContext(WidgetPreviewContext(family: .systemLarge))
+            //                            .environmentObject(countdownVM)
+            CountdownWidgetEntryView(entry: SimpleEntry(date: Date()))
+                .previewContext(WidgetPreviewContext(family: .systemLarge))
+                .environment(\.colorScheme, .dark)
         }
     }
 }

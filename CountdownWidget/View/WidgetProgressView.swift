@@ -39,5 +39,8 @@ struct WidgetProgressView_Previews: PreviewProvider {
         WidgetProgressView()
             //            .environmentObject(CountdownViewModel())
             .previewContext(WidgetPreviewContext(family: .systemSmall))
+        
+        
+        
     }
 }

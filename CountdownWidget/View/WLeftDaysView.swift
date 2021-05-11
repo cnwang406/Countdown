@@ -64,10 +64,18 @@ struct WLeftDaysView_Previews: PreviewProvider {
         Group{
         WLeftDaysView(countdownVM: CountdownViewModel())
         .previewContext(WidgetPreviewContext(family: .systemSmall))
+            WLeftDaysView(countdownVM: CountdownViewModel())
+            .previewContext(WidgetPreviewContext(family: .systemSmall))
+                .environment(\.colorScheme, .dark)
         WLeftDaysView(countdownVM: CountdownViewModel())
         .previewContext(WidgetPreviewContext(family: .systemMedium))
+            WLeftDaysView(countdownVM: CountdownViewModel())
+            .previewContext(WidgetPreviewContext(family: .systemMedium))
         WLeftDaysView(countdownVM: CountdownViewModel())
         .previewContext(WidgetPreviewContext(family: .systemLarge))
+            WLeftDaysView(countdownVM: CountdownViewModel())
+            .previewContext(WidgetPreviewContext(family: .systemLarge))
+
         }
     }
 }
