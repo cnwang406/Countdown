@@ -50,8 +50,6 @@ struct WLeftDaysView: View {
                 } //: HStack
                 .frame(width: geometry.size.width * 0.95,  height:geometry.size.height * 0.5)
             }
-//            
-//            .frame(width: geometry.size.width * 0.99,  height:geometry.size.height * 0.99)
             
         }
     }
