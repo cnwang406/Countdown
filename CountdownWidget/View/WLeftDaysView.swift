@@ -27,7 +27,7 @@ struct WLeftDaysView: View {
                 Text(countdownVM.title)
                     
                     .fixedSize(horizontal: false, vertical: true)
-                    .font(.system(size: min(geometry.size.height, geometry.size.width) / CGFloat(countdownVM.title.utf16.count + (countdownVM.title.utf8.count - countdownVM.title.count) / 2) / 6 * 8 ))
+                    .font(.system(size: min(geometry.size.height, geometry.size.width) / CGFloat(countdownVM.title.utf16.count + (countdownVM.title.utf8.count - countdownVM.title.count) / 2) / 6 * 9 ))
                     .frame(width: geometry.size.width ,height: geometry.size.height * 0.350)
                     .background(Color.blue.opacity(0.1))
                 
