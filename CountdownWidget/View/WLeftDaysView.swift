@@ -24,13 +24,13 @@ struct WLeftDaysView: View {
     var body: some View {
         GeometryReader { geometry in
             VStack(alignment: .center){
-                Text(countdownVM.title)
-                    
-                    .fixedSize(horizontal: false, vertical: true)
-                    .font(.system(size: min(geometry.size.height, geometry.size.width) / CGFloat(countdownVM.title.utf16.count + (countdownVM.title.utf8.count - countdownVM.title.count) / 2) / 6 * 9 ))
+                Text(countdownVM.title )
+//                Text("學測來了學測來了學測來了" )
+                    .minimumScaleFactor(0.4)
                     .frame(width: geometry.size.width ,height: geometry.size.height * 0.350)
+                    .font(.system(size: min(geometry.size.height, geometry.size.width) / CGFloat(countdownVM.title.utf16.count + (countdownVM.title.utf8.count - countdownVM.title.count) / 2) / 6 * 20 ))
                     .background(Color.blue.opacity(0.1))
-                
+
                 HStack(spacing:0){
                     Image(countdownVM.iconName)
                         .resizable()
