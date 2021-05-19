@@ -18,80 +18,82 @@ struct MainView: View {
     @StateObject var countdownVM: CountdownViewModel = CountdownViewModel()
     var body: some View {
         NavigationView {
-            VStack{
-                Image(countdownVM.iconName)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 120, height: 120, alignment: .center)
-                    .padding(.vertical,30)
-                    .onTapGesture {
-                        isSelectIconView.toggle()
-                    }
-                
-                Text(countdownVM.title)
-                    .font(.title)
-                    .padding(.vertical,60)
-                    .onTapGesture {
-                        isChangeTitleView.toggle()
-                        countdownVM.save()
-                        WidgetCenter.shared.reloadAllTimelines()
-                    }
-                
-                CountdownProgressView(countdownVM: countdownVM)
-                    .padding(.vertical,30)
-                
-                
-                DateDetailView(countdownVM: countdownVM)
-                
-            }
-            
-            .padding()
-            
-            .toolbar(content: {
-                ToolbarItem(placement: .principal, content: {
-                    Text(NSLocalizedString("Days Left", comment: "default"))
+            GeometryReader { geometry in
+                ZStack(alignment: .top){
+                    
+                    Image(countdownVM.iconName)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 120, height: 120, alignment: .center)
+
+                        .onTapGesture {
+                            isSelectIconView.toggle()
+                        }.offset(y: geometry.size.height * 0.1)
+                        
+                    Text(countdownVM.title)
                         .font(.title)
+                        .onTapGesture {
+                            isChangeTitleView.toggle()
+                            countdownVM.save()
+                            WidgetCenter.shared.reloadAllTimelines()
+                        }
+                        .offset(y: geometry.size.height * 0.35)
+
+                    CountdownProgressView(countdownVM: countdownVM)
+                        .offset(y: geometry.size.height * 0.45)
+                    
+                    DateDetailView(countdownVM: countdownVM)
+                        .offset(y: geometry.size.height * 0.80)
+                }
+                
+                .padding()
+                .navigationBarTitleDisplayMode(.inline)
+                
+                .toolbar(content: {
+                    ToolbarItem(placement: .principal, content: {
+                        Text(NSLocalizedString("Days Left", comment: "default"))
+                            .font(.title)
+                    })
+                    ToolbarItem(placement: .navigationBarTrailing, content: {
+                        Button(action: {
+                            isSettingViewShow.toggle()
+                        }, label: {
+                            Image(systemName: "gear")
+                        })
+                    })
+                    ToolbarItem(placement: .navigationBarLeading, content: {
+                        Button(action: {
+                            isAboutViewShow.toggle()
+                        }, label: {
+                            Image(systemName: "info")
+                        })
+                    })
+                    
                     
                 })
-                ToolbarItem(placement: .navigationBarTrailing, content: {
-                    Button(action: {
-                        isSettingViewShow.toggle()
-                    }, label: {
-                        Image(systemName: "gear")
-                    })
+                .navigationViewStyle(StackNavigationViewStyle())
+                .sheet(isPresented: $isSettingViewShow, onDismiss: {
+                    WidgetCenter.shared.reloadAllTimelines()
+                }, content: {
+                    SetDateView(countdownVM: countdownVM)
                 })
-                ToolbarItem(placement: .navigationBarLeading, content: {
-                    Button(action: {
-                        isAboutViewShow.toggle()
-                    }, label: {
-                        Image(systemName: "info")
-                    })
+                .sheet(isPresented: $isAboutViewShow, onDismiss: {
+                    WidgetCenter.shared.reloadAllTimelines()
+                }, content: {
+                    AboutView()
                 })
+                .sheet(isPresented: $isSelectIconView, onDismiss: {
+                    WidgetCenter.shared.reloadAllTimelines()
+                }, content: {
+                    SelectIconView(countdownVM: countdownVM)})
                 
-                
+                .sheet(isPresented: $isChangeTitleView, onDismiss: {
+                    countdownVM.save()
+                    WidgetCenter.shared.reloadAllTimelines()
+                }, content: {
+                    PopupTextView(title: "Change Subject", textEntered: $countdownVM.title, showingAlert: $isChangeTitleView)
             })
-            .navigationViewStyle(StackNavigationViewStyle())
-            .sheet(isPresented: $isSettingViewShow, onDismiss: {
-                WidgetCenter.shared.reloadAllTimelines()
-            }, content: {
-                SetDateView(countdownVM: countdownVM)
-            })
-            .sheet(isPresented: $isAboutViewShow, onDismiss: {
-                WidgetCenter.shared.reloadAllTimelines()
-            }, content: {
-                AboutView()
-            })
-            .sheet(isPresented: $isSelectIconView, onDismiss: {
-                WidgetCenter.shared.reloadAllTimelines()
-            }, content: {
-                SelectIconView(countdownVM: countdownVM)})
-            
-            .sheet(isPresented: $isChangeTitleView, onDismiss: {
-                countdownVM.save()
-                WidgetCenter.shared.reloadAllTimelines()
-            }, content: {
-                PopupTextView(title: "Change Subject", textEntered: $countdownVM.title, showingAlert: $isChangeTitleView)
-            })
+            }
             
             
         }//: NavigationView

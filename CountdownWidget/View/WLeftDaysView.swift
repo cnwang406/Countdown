@@ -23,13 +23,16 @@ struct WLeftDaysView: View {
     //MARK: - BODY
     var body: some View {
         GeometryReader { geometry in
-            VStack(alignment: .center){
-                Text(countdownVM.title )
-//                Text("學測來了學測來了學測來了" )
-                    .minimumScaleFactor(0.4)
+            
+            ZStack(alignment: .top){
+//                Text(countdownVM.title )
+                Text("Tesla is coming")
+//                Text("學測來了學測來了學測來了學測來了" )
+                    .minimumScaleFactor(0.30)
                     .frame(width: geometry.size.width ,height: geometry.size.height * 0.350)
                     .font(.system(size: min(geometry.size.height, geometry.size.width) / CGFloat(countdownVM.title.utf16.count + (countdownVM.title.utf8.count - countdownVM.title.count) / 2) / 6 * 20 ))
                     .background(Color.blue.opacity(0.1))
+//                    .offset(y:-geometry.size.height * 0.100)
 
                 HStack(spacing:0){
                     Image(countdownVM.iconName)
@@ -43,12 +46,13 @@ struct WLeftDaysView: View {
                     .opacity(0.7)
                     .frame(width: geometry.size.width * 0.22)
                     Text("\(countdownVM.left , specifier: "%0.1f")")
-                        .font(.system(size: 36 * scale))
+                        .font(.system(size: 32 * scale))
                         .fontWeight(.bold)
                         .foregroundColor(countdownVM.leftUnit == "Hours" ? .red : .green)
                     
                 } //: HStack
                 .frame(width: geometry.size.width * 0.95,  height:geometry.size.height * 0.5)
+                .offset(y:+geometry.size.height * 0.400)
             }
             
         }

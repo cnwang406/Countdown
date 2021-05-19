@@ -23,18 +23,15 @@ struct WElapsedView: View {
     //MARK: - BODY
     var body: some View {
         GeometryReader { geometry in
-            VStack(alignment: .center){
+            ZStack(alignment: .top){
 
                 Text(countdownVM.title  )
-                    .minimumScaleFactor(0.4)
+                    .minimumScaleFactor(0.3)
                     .frame(width: geometry.size.width ,height: geometry.size.height * 0.350)
                     .font(.system(size: min(geometry.size.height, geometry.size.width) / CGFloat(countdownVM.title.utf16.count + (countdownVM.title.utf8.count - countdownVM.title.count) / 2) / 6 * 20 ))
                     .background(Color.blue.opacity(0.1))
-//                    .fixedSize(horizontal: false, vertical: true)
-//                    .font(.system(size: min(geometry.size.height, geometry.size.width) / CGFloat(countdownVM.title.utf16.count) / 6 * 8))
-//                    .frame(width: geometry.size.width ,height: geometry.size.height * 0.40)
-//                    .background(Color.blue.opacity(0.1))
-                               
+//                    .offset(y:-geometry.size.height * 0.100)
+                
                 HStack(spacing:0){
                     Image(countdownVM.iconName)
                         .resizable()
@@ -48,10 +45,12 @@ struct WElapsedView: View {
                     
                     .frame(width: geometry.size.width * 0.22)
                     Text("\(countdownVM.current, specifier: "%0.1f")")
-                        .font(.system(size: 36 * scale))
+//                        .minimumScaleFactor(0.3)
+                        .font(.system(size: 32 * scale))
                         .fontWeight(.bold)                    
                 } //: HStack
                 .frame(width: geometry.size.width * 0.95,  height:geometry.size.height * 0.5)
+                .offset(y:+geometry.size.height * 0.400)
             }
             
 //            .frame(width: geometry.size.width * 0.99,  height:geometry.size.height * 0.99)
