@@ -49,9 +49,10 @@ struct WElapsedView: View {
                     .frame(width: geometry.size.width * 0.22)
                     Text("\(countdownVM.current, specifier: "%0.1f")")
 //                        .minimumScaleFactor(0.3)
-                        .font(.system(size: 32 * scale))
+                        .font(.system(size: 60 * scale))
                         .fontWeight(.bold)                    
                 } //: HStack
+                .minimumScaleFactor(0.50)
                 .frame(width: geometry.size.width * 0.95,  height:geometry.size.height * 0.5)
                 .offset(y:+geometry.size.height * 0.400)
             }
