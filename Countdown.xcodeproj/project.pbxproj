@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		27A8054A26469FB400832260 /* SetDateDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A8054926469FB400832260 /* SetDateDescriptionView.swift */; };
 		27A8054B2646A4EC00832260 /* SetDateDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A8054926469FB400832260 /* SetDateDescriptionView.swift */; };
-		27A805502646D48F00832260 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27A805522646D48F00832260 /* Localizable.strings */; };
 		27A805552646D6F200832260 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A805542646D6F200832260 /* AboutView.swift */; };
 		27A805582646D7B000832260 /* AboutRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A805572646D7B000832260 /* AboutRowView.swift */; };
 		27A8055A2646D7F000832260 /* AboutLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A805592646D7F000832260 /* AboutLevelView.swift */; };
@@ -88,8 +87,6 @@
 
 /* Begin PBXFileReference section */
 		27A8054926469FB400832260 /* SetDateDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetDateDescriptionView.swift; sourceTree = "<group>"; };
-		27A805512646D48F00832260 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		27A805532646D49E00832260 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		27A805542646D6F200832260 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		27A805572646D7B000832260 /* AboutRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutRowView.swift; sourceTree = "<group>"; };
 		27A805592646D7F000832260 /* AboutLevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutLevelView.swift; sourceTree = "<group>"; };
@@ -179,7 +176,6 @@
 		27BD807F263AF903009A8DA9 = {
 			isa = PBXGroup;
 			children = (
-				27A805522646D48F00832260 /* Localizable.strings */,
 				27B7E22D263D6AEC00E3CE71 /* CountdownWidgetExtension.entitlements */,
 				27B6702D264427F70058B31C /* README.md */,
 				27BD808A263AF903009A8DA9 /* Countdown */,
@@ -362,7 +358,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				27BD8093263AF905009A8DA9 /* Preview Assets.xcassets in Resources */,
-				27A805502646D48F00832260 /* Localizable.strings in Resources */,
 				27C901DD263B709900BB8BAA /* Assets.xcassets in Resources */,
 				27BD8090263AF905009A8DA9 /* Assets.xcassets in Resources */,
 			);
@@ -447,18 +442,6 @@
 			targetProxy = 27BD80AB263B05F1009A8DA9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		27A805522646D48F00832260 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				27A805512646D48F00832260 /* zh-Hant */,
-				27A805532646D49E00832260 /* en */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		27BD8095263AF905009A8DA9 /* Debug */ = {

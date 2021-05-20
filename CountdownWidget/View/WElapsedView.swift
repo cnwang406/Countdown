@@ -24,12 +24,15 @@ struct WElapsedView: View {
     var body: some View {
         GeometryReader { geometry in
             ZStack(alignment: .top){
-
+                Rectangle().frame(width: geometry.size.width  ,height: geometry.size.height * 0.350)
+                    .background(Color.blue).opacity(0.1)
+                    .shadow(color: .black.opacity(0.5), radius: 1, x: 0.0, y: 0.0)
+                
                 Text(countdownVM.title  )
                     .minimumScaleFactor(0.3)
                     .frame(width: geometry.size.width ,height: geometry.size.height * 0.350)
                     .font(.system(size: min(geometry.size.height, geometry.size.width) / CGFloat(countdownVM.title.utf16.count + (countdownVM.title.utf8.count - countdownVM.title.count) / 2) / 6 * 20 ))
-                    .background(Color.blue.opacity(0.1))
+                    
 //                    .offset(y:-geometry.size.height * 0.100)
                 
                 HStack(spacing:0){

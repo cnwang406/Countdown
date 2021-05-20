@@ -25,13 +25,16 @@ struct WLeftDaysView: View {
         GeometryReader { geometry in
             
             ZStack(alignment: .top){
-//                Text(countdownVM.title )
-                Text("Tesla is coming")
+                Rectangle().frame(width: geometry.size.width  ,height: geometry.size.height * 0.350)
+                    .background(Color.blue).opacity(0.1)
+                    .shadow(color: .black.opacity(0.5), radius: 1, x: 0.0, y: 0.0)
+                Text(countdownVM.title )
+//                Text("Tesla is coming")
 //                Text("學測來了學測來了學測來了學測來了" )
                     .minimumScaleFactor(0.30)
-                    .frame(width: geometry.size.width ,height: geometry.size.height * 0.350)
+                    .frame(width: geometry.size.width * 0.95  ,height: geometry.size.height * 0.350)
                     .font(.system(size: min(geometry.size.height, geometry.size.width) / CGFloat(countdownVM.title.utf16.count + (countdownVM.title.utf8.count - countdownVM.title.count) / 2) / 6 * 20 ))
-                    .background(Color.blue.opacity(0.1))
+//                    .background(Color.blue.opacity(0.1))
 //                    .offset(y:-geometry.size.height * 0.100)
 
                 HStack(spacing:0){
@@ -46,11 +49,12 @@ struct WLeftDaysView: View {
                     .opacity(0.7)
                     .frame(width: geometry.size.width * 0.22)
                     Text("\(countdownVM.left , specifier: "%0.1f")")
-                        .font(.system(size: 32 * scale))
+                        .font(.system(size: 60 * scale))
                         .fontWeight(.bold)
                         .foregroundColor(countdownVM.leftUnit == "Hours" ? .red : .green)
                     
                 } //: HStack
+                .minimumScaleFactor(0.50)
                 .frame(width: geometry.size.width * 0.95,  height:geometry.size.height * 0.5)
                 .offset(y:+geometry.size.height * 0.400)
             }

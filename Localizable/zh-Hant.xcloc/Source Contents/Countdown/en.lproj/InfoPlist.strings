@@ -1,2 +1,4 @@
+/* Bundle display name */
+"CFBundleDisplayName" = "Days Left";
 /* Bundle name */
 "CFBundleName" = "Countdown";

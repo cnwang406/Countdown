@@ -2,7 +2,7 @@
 
 ## Version
 
-1.0.5
+1.0.7
 
 ## Build and Runtime Requirements
 + Xcode 12.3 or later

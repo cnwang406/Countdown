@@ -5,6 +5,11 @@
       <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="12.5" build-num="12E262"/>
     </header>
     <body>
+      <trans-unit id="CFBundleDisplayName" xml:space="preserve">
+        <source>Days Left</source>
+        <target>Days Left</target>
+        <note>Bundle display name</note>
+      </trans-unit>
       <trans-unit id="CFBundleName" xml:space="preserve">
         <source>Countdown</source>
         <target>Countdown</target>
@@ -32,14 +37,19 @@
         <target>%@</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
+      <trans-unit id="About" xml:space="preserve">
+        <source>About</source>
+        <target>About</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
       <trans-unit id="Close" xml:space="preserve">
         <source>Close</source>
         <target>Close</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
-      <trans-unit id="Countdown Count" xml:space="preserve">
-        <source>Countdown Count</source>
-        <target>Countdown Count</target>
+      <trans-unit id="Days Left" xml:space="preserve">
+        <source>Days Left</source>
+        <target>Days Left</target>
         <note>default</note>
       </trans-unit>
       <trans-unit id="Description" xml:space="preserve">
@@ -85,6 +95,11 @@
       <trans-unit id="Left" xml:space="preserve">
         <source>Left</source>
         <target>Left</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="OK" xml:space="preserve">
+        <source>OK</source>
+        <target>OK</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Select Icon" xml:space="preserve">
@@ -171,24 +186,24 @@
         <target>%@</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
+      <trans-unit id="About" xml:space="preserve">
+        <source>About</source>
+        <target>About</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
       <trans-unit id="Close" xml:space="preserve">
         <source>Close</source>
         <target>Close</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
-      <trans-unit id="Countdown Count" xml:space="preserve">
-        <source>Countdown Count</source>
-        <target>Countdown Count</target>
+      <trans-unit id="Days Left" xml:space="preserve">
+        <source>Days Left</source>
+        <target>Days Left</target>
         <note>default</note>
       </trans-unit>
       <trans-unit id="Description" xml:space="preserve">
         <source>Description</source>
         <target>Description</target>
-        <note>No comment provided by engineer.</note>
-      </trans-unit>
-      <trans-unit id="El'd" xml:space="preserve">
-        <source>El'd</source>
-        <target>El'd</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Elapsed" xml:space="preserve">
@@ -231,6 +246,11 @@
         <target>Left</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
+      <trans-unit id="OK" xml:space="preserve">
+        <source>OK</source>
+        <target>OK</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
       <trans-unit id="Select Icon" xml:space="preserve">
         <source>Select Icon</source>
         <target>Select Icon</target>
@@ -256,6 +276,11 @@
         <target>TO</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
+      <trans-unit id="Tesla is coming" xml:space="preserve">
+        <source>Tesla is coming</source>
+        <target>Tesla is coming</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
       <trans-unit id="To" xml:space="preserve">
         <source>To</source>
         <target>To</target>
@@ -266,9 +291,19 @@
         <target>UNTITLED</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
+      <trans-unit id="pass" xml:space="preserve">
+        <source>pass</source>
+        <target>pass</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
       <trans-unit id="w%@ h%@" xml:space="preserve">
         <source>w%1$@ h%2$@</source>
         <target>w%1$@ h%2$@</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="學測來了學測來了學測來了學測來了" xml:space="preserve">
+        <source>學測來了學測來了學測來了學測來了</source>
+        <target>學測來了學測來了學測來了學測來了</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
     </body>
