@@ -50,7 +50,7 @@ struct WElapsedView: View {
                     Text("\(countdownVM.current, specifier: "%0.1f")")
 //                        .minimumScaleFactor(0.3)
                         .font(.system(size: 60 * scale))
-                        .fontWeight(.bold)                    
+//                        .fontWeight(.bold)                    
                 } //: HStack
                 .minimumScaleFactor(0.50)
                 .frame(width: geometry.size.width * 0.95,  height:geometry.size.height * 0.5)

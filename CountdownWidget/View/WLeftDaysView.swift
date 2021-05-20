@@ -34,6 +34,7 @@ struct WLeftDaysView: View {
                     .minimumScaleFactor(0.30)
                     .frame(width: geometry.size.width * 0.95  ,height: geometry.size.height * 0.350)
                     .font(.system(size: min(geometry.size.height, geometry.size.width) / CGFloat(countdownVM.title.utf16.count + (countdownVM.title.utf8.count - countdownVM.title.count) / 2) / 6 * 20 ))
+                    
 //                    .background(Color.blue.opacity(0.1))
 //                    .offset(y:-geometry.size.height * 0.100)
 
@@ -50,7 +51,7 @@ struct WLeftDaysView: View {
                     .frame(width: geometry.size.width * 0.22)
                     Text("\(countdownVM.left , specifier: "%0.1f")")
                         .font(.system(size: 60 * scale))
-                        .fontWeight(.bold)
+//                        .fontWeight(.bold)
                         .foregroundColor(countdownVM.leftUnit == "Hours" ? .red : .green)
                     
                 } //: HStack

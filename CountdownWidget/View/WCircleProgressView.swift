@@ -57,7 +57,7 @@ struct WCircleProgressView: View {
 
                 Text("\(ratio * 100, specifier: "%0.1f")%")
                     .font(.system(size:  32.0 * scale))
-                    .fontWeight(.bold)
+//                    .fontWeight(.bold)
                     .opacity(0.6)
                     .offset(y: geometry.size.height * 0.38)
                 Image(countdownVM.iconName)

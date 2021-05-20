@@ -13,7 +13,7 @@ struct DateDetailView: View {
     //MARK: - BODY
     var body: some View {
         VStack(spacing: 10){
-            HStack {
+//            HStack {
                 //            Text ("From")
                 
                 //            Text(countdownVM.dateFrom.toString())
@@ -25,20 +25,22 @@ struct DateDetailView: View {
                             countdownVM.dateFromEnabled.toggle()
                         }
                         print ("reload timeline")
+                        countdownVM.checkTab()
                         countdownVM.save()
                         WidgetCenter.shared.reloadAllTimelines()
                     })
                     .onChange(of: countdownVM.dateFrom) { Equatable in
                         print("onChange: \(Equatable)")
                         print ("reload timeline")
+                        
                         countdownVM.save()
                         WidgetCenter.shared.reloadAllTimelines()
                     }
                 
                 
-            }
+//            }
 //            Spacer()
-            HStack (spacing: 10){
+//            HStack (spacing: 10){
                 //                Text ("To")
 //                Spacer()
                 //                Text(countdownVM.dateTo.toString())
@@ -49,7 +51,7 @@ struct DateDetailView: View {
                         if !countdownVM.dateToEnabled && !countdownVM.dateFromEnabled {
                             countdownVM.dateToEnabled.toggle()
                         }
-                        print ("reload timeline")
+                        countdownVM.checkTab()
                         countdownVM.save()
                         WidgetCenter.shared.reloadAllTimelines()
                         
@@ -60,7 +62,7 @@ struct DateDetailView: View {
                         WidgetCenter.shared.reloadAllTimelines()
                     }
 //                Spacer()
-            }
+//            }
             
 //            Text("\(countdownVM.dateFrom.description)")
 //            Text("\(countdownVM.dateTo.description)")

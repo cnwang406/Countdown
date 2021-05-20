@@ -42,7 +42,7 @@ class CountdownViewModel: ObservableObject{
         currentDays <= 1.5 ? "Hours" : "Days"
     }
     
-    
+    @Published var activateTab: Int = 0
     
     var today =  Date()
     
@@ -58,6 +58,9 @@ class CountdownViewModel: ObservableObject{
 //        self.leftUnit = UserDefaults(suiteName: "group.com.cnwang")?.leftUnit ?? "*Days"
 //        self.elapsedUnit = UserDefaults(suiteName: "group.com.cnwang")?.elapsedUnit ?? "*Days"
         print ("CountdownVM init()")
+        
+        checkTab()
+       
     }
     func save(){
         UserDefaults(suiteName: "group.com.cnwang")?.setValue(self.dateFrom, forKey: "dateFrom")
@@ -69,6 +72,15 @@ class CountdownViewModel: ObservableObject{
         print ("CountdownVM save()")
     }
     
-
+    func checkTab(){
+        if self.dateFromEnabled && self.dateToEnabled {
+            activateTab = 0
+            
+        } else if self.dateFromEnabled && !self.dateToEnabled{
+            activateTab =  1
+        } else if !self.dateFromEnabled && self.dateToEnabled {
+            activateTab = 2
+        }
+    }
     
 }
