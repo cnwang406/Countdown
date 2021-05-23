@@ -26,5 +26,7 @@ var iconsname: [String] = [
     "airplane","banana","bicycle","birthday","bookmark","camping","checklist","clock","coffee-beans",
     "coffee-maker","coffee","contacts","dribbble","edit","exam","food","hamper","home","hospital","idea",
     "key","money","mountain","music","outdoor-swimming","restaurant","running","speech-bubble",
-    "street-food","tesla.red","tesla.white","toolbox","trash"
-]
+    "street-food","tesla.red","tesla.white","toolbox","trash","school","bank","bar","cafe","car","celemony",
+    "city-hall","dining","food-cart","fountain","gas-station","hotel-building","hotel-star","hotel",
+    "merry-go-around","obelisk","pavilion","railway-station","roller-coaster","taxi","water-tower","wharf"
+].sorted()

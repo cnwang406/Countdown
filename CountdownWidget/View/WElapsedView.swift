@@ -35,7 +35,7 @@ struct WElapsedView: View {
                     
 //                    .offset(y:-geometry.size.height * 0.100)
                 
-                HStack(spacing:0){
+                HStack(alignment:.lastTextBaseline ,spacing:0){
                     Image(countdownVM.iconName)
                         .resizable()
                         .scaledToFit()
@@ -54,7 +54,7 @@ struct WElapsedView: View {
                 } //: HStack
                 .minimumScaleFactor(0.50)
                 .frame(width: geometry.size.width * 0.95,  height:geometry.size.height * 0.5)
-                .offset(y:+geometry.size.height * 0.400)
+                .offset(y:+geometry.size.height * 0.450)
             }
             
 //            .frame(width: geometry.size.width * 0.99,  height:geometry.size.height * 0.99)

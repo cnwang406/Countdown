@@ -39,17 +39,19 @@ struct WLeftDaysView: View {
 //                    .offset(y:-geometry.size.height * 0.100)
 
                 HStack(alignment:.lastTextBaseline ,spacing:0){
-                    Image(countdownVM.iconName)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 32 * scale)
+                    
+                        Image(countdownVM.iconName)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 32 * scale)
+                        VStack(alignment:.leading){
+                            Text("Left")
+                            Text(countdownVM.leftUnit)
+                        }.font(.system(size: 11 * scale))
+                        .opacity(0.7)
+                        .frame(width: geometry.size.width * 0.22)
+                    
                         
-                    VStack(alignment:.leading){
-                        Text("Left")
-                        Text(countdownVM.leftUnit)
-                    }.font(.system(size: 11 * scale))
-                    .opacity(0.7)
-                    .frame(width: geometry.size.width * 0.22)
                     Text("\(countdownVM.left , specifier: "%0.1f")")
                         .font(.system(size: 60 * scale))
 //                        .fontWeight(.bold)
