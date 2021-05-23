@@ -37,6 +37,7 @@ struct WCircleProgressView: View {
                     .stroke(lineWidth: 15.0 * scale * 0.75)
                     .opacity(0.2)
                     .foregroundColor(ratio > 0.7 ? .green : .red)
+                    
                     .frame(width: geometry.size.width * 0.6,  height:geometry.size.height * 0.6)
                     .offset(y: geometry.size.height * 0.14)
                 Circle()
