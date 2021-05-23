@@ -38,11 +38,12 @@ struct WLeftDaysView: View {
 //                    .background(Color.blue.opacity(0.1))
 //                    .offset(y:-geometry.size.height * 0.100)
 
-                HStack(spacing:0){
+                HStack(alignment:.lastTextBaseline ,spacing:0){
                     Image(countdownVM.iconName)
                         .resizable()
                         .scaledToFit()
                         .frame(width: 32 * scale)
+                        
                     VStack(alignment:.leading){
                         Text("Left")
                         Text(countdownVM.leftUnit)
@@ -57,7 +58,7 @@ struct WLeftDaysView: View {
                 } //: HStack
                 .minimumScaleFactor(0.50)
                 .frame(width: geometry.size.width * 0.95,  height:geometry.size.height * 0.5)
-                .offset(y:+geometry.size.height * 0.400)
+                .offset(y:+geometry.size.height * 0.450)
             }
             
         }
