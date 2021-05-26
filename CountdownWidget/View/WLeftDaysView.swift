@@ -72,7 +72,7 @@ struct WLeftDaysView: View {
 struct WLeftDaysView_Previews: PreviewProvider {
     static var previews: some View {
         Group{
-        WLeftDaysView(countdownVM: CountdownViewModel())
+            WLeftDaysView(countdownVM: CountdownViewModel())
         .previewContext(WidgetPreviewContext(family: .systemSmall))
             WLeftDaysView(countdownVM: CountdownViewModel())
             .previewContext(WidgetPreviewContext(family: .systemSmall))
