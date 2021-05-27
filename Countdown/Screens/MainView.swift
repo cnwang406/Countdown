@@ -10,6 +10,7 @@ import Foundation
 import WidgetKit
 struct MainView: View {
     
+    @State var onScreenShowed = UserDefaults(suiteName: "group.com.cnwang")?.onBoardScreenShow
     
     @State var isSettingViewShow: Bool = false
     @State var isAboutViewShow: Bool = false
@@ -17,6 +18,7 @@ struct MainView: View {
     @State var isChangeTitleView: Bool = false
     @StateObject var countdownVM: CountdownViewModel = CountdownViewModel()
     var body: some View {
+        
         NavigationView {
             GeometryReader { geometry in
                 ZStack(alignment: .top){
@@ -93,6 +95,13 @@ struct MainView: View {
                 }, content: {
                     PopupTextView(title: "Change Subject", textEntered: $countdownVM.title, showingAlert: $isChangeTitleView)
             })
+                .sheet(isPresented: $onScreenShowed, onDismiss: {
+                    UserDefaults(suiteName: "group.com.cnwang")?.setValue(false, forKey: "onScreenShowed")
+                    
+                    
+                }, content: {
+                    OnBoardScreen()
+                })
             }
             
             

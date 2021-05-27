@@ -8,6 +8,8 @@
 import Foundation
 
 extension UserDefaults {
+    var onBoardScreenShow: Bool = true
+    
     var dateFrom: Date {
         guard let value = self.value(forKey: "dateFrom") as? Date else {
             return Date()
