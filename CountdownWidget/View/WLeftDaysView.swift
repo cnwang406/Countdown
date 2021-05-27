@@ -71,19 +71,23 @@ struct WLeftDaysView: View {
 //MARK: - PREVIEW
 struct WLeftDaysView_Previews: PreviewProvider {
     static var previews: some View {
-        Group{
-            WLeftDaysView(countdownVM: CountdownViewModel())
+        
+        let cdvm = CountdownViewModel()
+        cdvm.title = "Dreams come true"
+        
+        return Group{
+            WLeftDaysView(countdownVM: cdvm)
         .previewContext(WidgetPreviewContext(family: .systemSmall))
-            WLeftDaysView(countdownVM: CountdownViewModel())
+            WLeftDaysView(countdownVM: cdvm)
             .previewContext(WidgetPreviewContext(family: .systemSmall))
                 .environment(\.colorScheme, .dark)
-        WLeftDaysView(countdownVM: CountdownViewModel())
+        WLeftDaysView(countdownVM: cdvm)
         .previewContext(WidgetPreviewContext(family: .systemMedium))
-            WLeftDaysView(countdownVM: CountdownViewModel())
+            WLeftDaysView(countdownVM: cdvm)
             .previewContext(WidgetPreviewContext(family: .systemMedium))
-        WLeftDaysView(countdownVM: CountdownViewModel())
+        WLeftDaysView(countdownVM: cdvm)
         .previewContext(WidgetPreviewContext(family: .systemLarge))
-            WLeftDaysView(countdownVM: CountdownViewModel())
+            WLeftDaysView(countdownVM: cdvm)
             .previewContext(WidgetPreviewContext(family: .systemLarge))
 
         }

@@ -16,12 +16,14 @@ struct OnBoardScreen: View {
         Text("WELCOME")
             .font(.title)
             .fontWeight(.bold)
+        OnBoardCellView()
+            .padding(.vertical,30)
         Spacer()
             Button(action: {}, label: {
                 Text("Start to use")
                     .font(.title)
             })
-        }
+        }.padding()
     }
 }
 

@@ -14,9 +14,14 @@ struct OnBoardCellView: View {
     var body: some View {
         HStack{
             
-        Image("")
+        Image("LeftDays Widget")
+            .resizable()
+            .scaledToFit()
+            .frame(width: 150, height: 150, alignment: .center)
+            .shadow(radius: 10)
             
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Put a widget on home screen")
+            .font(.title3)
         }
     }
 }
