@@ -17,7 +17,7 @@ struct OnBoardCellView: View {
         Image("LeftDays Widget")
             .resizable()
             .scaledToFit()
-            .frame(width: 150, height: 150, alignment: .center)
+            .frame(width: 120, height: 120, alignment: .center)
             .shadow(radius: 10)
             
         Text("Put a widget on home screen")

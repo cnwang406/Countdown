@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27A78B162660610D00D4CAE8 /* OnBoardScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B15175265E614D000F696B /* OnBoardScreen.swift */; };
+		27A78B172660611C00D4CAE8 /* OnBoardCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B15177265E6216000F696B /* OnBoardCellView.swift */; };
 		27A8054A26469FB400832260 /* SetDateDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A8054926469FB400832260 /* SetDateDescriptionView.swift */; };
 		27A8054B2646A4EC00832260 /* SetDateDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A8054926469FB400832260 /* SetDateDescriptionView.swift */; };
 		27A805552646D6F200832260 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A805542646D6F200832260 /* AboutView.swift */; };
@@ -421,6 +423,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27A78B172660611C00D4CAE8 /* OnBoardCellView.swift in Sources */,
 				27A805602646DA5A00832260 /* AboutLevelView.swift in Sources */,
 				27B7E229263D66B800E3CE71 /* SetDateView.swift in Sources */,
 				27C542102647C1D900EEF40B /* PopupTextView.swift in Sources */,
@@ -430,6 +433,7 @@
 				27C86D6C2645291F000D6889 /* SelectIconView.swift in Sources */,
 				27B7E22C263D677900E3CE71 /* WidgetProgressView.swift in Sources */,
 				27A9DEB0263CED38005480AA /* Date+Extensions.swift in Sources */,
+				27A78B162660610D00D4CAE8 /* OnBoardScreen.swift in Sources */,
 				27C86D6E26452955000D6889 /* IconGridItemView.swift in Sources */,
 				27D57D01263D3C1A00C92460 /* CircleProgressView.swift in Sources */,
 				27B7E237263E631000E3CE71 /* WLeftDaysView.swift in Sources */,
@@ -585,7 +589,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Countdown/Countdown.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_ASSET_PATHS = "\"Countdown/Preview Content\"";
 				DEVELOPMENT_TEAM = L43KX6QVVV;
 				ENABLE_PREVIEWS = YES;
@@ -610,7 +614,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Countdown/Countdown.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_ASSET_PATHS = "\"Countdown/Preview Content\"";
 				DEVELOPMENT_TEAM = L43KX6QVVV;
 				ENABLE_PREVIEWS = YES;
@@ -634,7 +638,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = CountdownWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = L43KX6QVVV;
 				INFOPLIST_FILE = CountdownWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -657,7 +661,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = CountdownWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = L43KX6QVVV;
 				INFOPLIST_FILE = CountdownWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

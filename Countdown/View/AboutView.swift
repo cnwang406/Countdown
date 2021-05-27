@@ -11,6 +11,7 @@ import SwiftUI
 struct AboutView: View {
     //MARK: - PROPERTIES
     @Environment(\.presentationMode) var presentationMode
+    @State var onBoardScreenShowed: Bool = UserDefaults(suiteName: "group.com.cnwang")?.onBoardScreenShow ?? true
     //MARK: - BODY
     var body: some View {
         NavigationView {
@@ -28,10 +29,17 @@ struct AboutView: View {
                     AboutRowView(name:"all icons from", linkLabel:"8icons", linkDestination: "icons8.com")
                     AboutRowView(name:"WHY?", content: "This app is for counting the days remains for my Tesla M3 coming")
                     
+                    AboutRowView(name:"tip", content: "This app is for counting the days remains for my Tesla M3 coming")
+                    
                 } //:GROUPBOX
                 .padding()
                 Spacer()
+                Toggle("Show tips at startup next time",isOn: $onBoardScreenShowed)
+                    .font(.title3)
+                    .opacity(0.8)
+                    .padding()
                 Button(action: {
+                    UserDefaults(suiteName: "group.com.cnwang")?.setValue(onBoardScreenShowed, forKey: "onBoardScreenShow")
                     presentationMode.wrappedValue.dismiss()
                 }, label: {
                     Text("Close")

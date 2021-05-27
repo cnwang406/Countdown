@@ -10,7 +10,7 @@ import Foundation
 import WidgetKit
 struct MainView: View {
     
-    @State var onScreenShowed = UserDefaults(suiteName: "group.com.cnwang")?.onBoardScreenShow
+    @State var onScreenShowed: Bool = UserDefaults(suiteName: "group.com.cnwang")?.onBoardScreenShow ?? true
     
     @State var isSettingViewShow: Bool = false
     @State var isAboutViewShow: Bool = false
@@ -97,8 +97,7 @@ struct MainView: View {
             })
                 .sheet(isPresented: $onScreenShowed, onDismiss: {
                     UserDefaults(suiteName: "group.com.cnwang")?.setValue(false, forKey: "onScreenShowed")
-                    
-                    
+    
                 }, content: {
                     OnBoardScreen()
                 })
