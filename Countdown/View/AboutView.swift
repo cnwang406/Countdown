@@ -17,7 +17,7 @@ struct AboutView: View {
         NavigationView {
             VStack {
                 GroupBox(
-                    label: AboutLevelView(labelText: "Application", labelImage: "applescript")
+                    label: AboutLevelView(labelText: "Application", labelImage: "")
                 ){
                     
                     AboutRowView(name: "Version", content: "Ver.\(UIApplication.appVersion!) build \(UIApplication.appBuildVersion!)")
@@ -26,10 +26,8 @@ struct AboutView: View {
                     AboutRowView(name:"Compability", content: "IOS14")
                     AboutRowView(name:"twitter", linkLabel:"@cnwang406", linkDestination: "twitter.com/cnwang406")
                     AboutRowView(name:"SWIFTUI", content: "2.0")
-                    AboutRowView(name:"all icons from", linkLabel:"8icons", linkDestination: "icons8.com")
+                    AboutRowView(name:"all icons from", linkLabel:"8icons.com", linkDestination: "icons8.com")
                     AboutRowView(name:"WHY?", content: "This app is for counting the days remains for my Tesla M3 coming")
-                    
-                    AboutRowView(name:"tip", content: "This app is for counting the days remains for my Tesla M3 coming")
                     
                 } //:GROUPBOX
                 .padding()
@@ -51,6 +49,7 @@ struct AboutView: View {
                 ToolbarItem(placement: .principal, content: {
                     Text("About")
                         .font(.title)
+                        .fontWeight(.bold)
                 })
             })
         }//:NavView

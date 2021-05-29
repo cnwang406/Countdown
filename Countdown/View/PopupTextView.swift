@@ -21,11 +21,15 @@ struct PopupTextView: View {
             VStack {
                 Text(title)
                     .font(.title)
-                    .foregroundColor(.black)
+                    .fontWeight(.bold)
+//                    .foregroundColor(.black)
+                    .foregroundColor(.accentColor)
+                    .padding()
                 
                 Spacer()
                 TextField(textEntered, text: $textEntered)
                     .padding(5)
+                    .font(.title)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
 //                    .background(Color.gray.opacity(0.2))
                     .foregroundColor(Color.accentColor)
@@ -43,11 +47,11 @@ struct PopupTextView: View {
                     
                     
                 }
-                .padding(30)
+                .padding()
                 .padding(.horizontal, 40)
-            }
         }
         
+        }.shadow(radius: 15)
         .frame(width: 320, height: 200)
     }
 }
@@ -55,10 +59,23 @@ struct PopupTextView: View {
 
 
 //MARK: - PREVIEW
-//struct PopupTextView_Previews: PreviewProvider {
-//   @State var title: String = ""
-//    @State var isShowing:Bool = true
-//    static var previews: some View {
-//        PopupTextView(textEntered: $title, showingAlert: .constant(true))
-//    }
-//}
+struct PopupTextView_Previews: PreviewProvider {
+
+    @State var isShowing:Bool = true
+    @State var title: String = ""
+    static var previews: some View {
+        
+        
+        GroupBox {
+            PopupTextView(title: "Enter Subject", textEntered: .constant("Dreams come true"), showingAlert: .constant(true))
+                .previewLayout(.sizeThatFits)
+            
+            
+            PopupTextView(title: "Enter Subject", textEntered: .constant("Dreams come true"), showingAlert: .constant(true))
+                .previewLayout(.sizeThatFits)
+                .environment(\.colorScheme, .dark)
+            
+        }
+    }
+
+}

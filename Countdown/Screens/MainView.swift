@@ -56,13 +56,13 @@ struct MainView: View {
                         Text(NSLocalizedString("Days Left", comment: "default"))
                             .font(.title)
                     })
-                    ToolbarItem(placement: .navigationBarTrailing, content: {
-                        Button(action: {
-                            isSettingViewShow.toggle()
-                        }, label: {
-                            Image(systemName: "gear")
-                        })
-                    })
+//                    ToolbarItem(placement: .navigationBarTrailing, content: {
+//                        Button(action: {
+//                            isSettingViewShow.toggle()
+//                        }, label: {
+//                            Image(systemName: "gear")
+//                        })
+//                    })
                     ToolbarItem(placement: .navigationBarLeading, content: {
                         Button(action: {
                             isAboutViewShow.toggle()
@@ -94,6 +94,7 @@ struct MainView: View {
                     WidgetCenter.shared.reloadAllTimelines()
                 }, content: {
                     PopupTextView(title: "Change Subject", textEntered: $countdownVM.title, showingAlert: $isChangeTitleView)
+                        
             })
                 .sheet(isPresented: $onScreenShowed, onDismiss: {
                     UserDefaults(suiteName: "group.com.cnwang")?.setValue(false, forKey: "onScreenShowed")

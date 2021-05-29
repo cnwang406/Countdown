@@ -32,7 +32,7 @@ struct WLeftDaysView: View {
 //                Text("Tesla is coming")
 //                Text("學測來了學測來了學測來了學測來了" )
                     .minimumScaleFactor(0.30)
-                    .frame(width: geometry.size.width * 0.95  ,height: geometry.size.height * 0.350)
+                    .frame(width: geometry.size.width * 0.90  ,height: geometry.size.height * 0.350)
                     .font(.system(size: min(geometry.size.height, geometry.size.width) / CGFloat(countdownVM.title.utf16.count + (countdownVM.title.utf8.count - countdownVM.title.count) / 2) / 6 * 20 ))
                     
 //                    .background(Color.blue.opacity(0.1))

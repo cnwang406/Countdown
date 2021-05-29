@@ -82,14 +82,14 @@ struct SelectIconView: View {
                         Text("Select Icon")
                             .font(.title)
                     })
-                    ToolbarItem(placement: .navigationBarTrailing, content: {
-                        Button(action: {
-                            countdownVM.save()
-                            presentationMode.wrappedValue.dismiss()
-                        }, label: {
-                            Image(systemName: "arrow.turn.right.up")
-                        })
-                    })
+//                    ToolbarItem(placement: .navigationBarTrailing, content: {
+//                        Button(action: {
+//                            countdownVM.save()
+//                            presentationMode.wrappedValue.dismiss()
+//                        }, label: {
+//                            Image(systemName: "arrow.turn.right.up")
+//                        })
+//                    })
                     
                 })
             }
