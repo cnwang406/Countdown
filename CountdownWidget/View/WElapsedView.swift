@@ -30,7 +30,7 @@ struct WElapsedView: View {
                 
                 Text(countdownVM.title  )
                     .minimumScaleFactor(0.3)
-                    .frame(width: geometry.size.width * haptic0.95,height: geometry.size.height * 0.350)
+                    .frame(width: geometry.size.width * 0.95,height: geometry.size.height * 0.350)
                     .font(.system(size: min(geometry.size.height, geometry.size.width) / CGFloat(countdownVM.title.utf16.count + (countdownVM.title.utf8.count - countdownVM.title.count) / 2) / 6 * 20 ))
                     
 //                    .offset(y:-geometry.size.height * 0.100)
