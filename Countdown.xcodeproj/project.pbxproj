@@ -594,7 +594,7 @@
 				DEVELOPMENT_TEAM = L43KX6QVVV;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Countdown/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -619,7 +619,7 @@
 				DEVELOPMENT_TEAM = L43KX6QVVV;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Countdown/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
