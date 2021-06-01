@@ -15,9 +15,9 @@ struct WElapsedView: View {
         if widgetFamily == .systemSmall {
             return 1.0
         } else if widgetFamily == .systemMedium {
-            return 1.5
+            return 1.8
         } else {
-            return  2.0
+            return  2.2
         }
     }
     //MARK: - BODY
