@@ -63,6 +63,7 @@
 		27D57D03263D3C4200C92460 /* ElapsedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D57D02263D3C4200C92460 /* ElapsedView.swift */; };
 		27D7574F263BF76D00698900 /* CountdownViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C901E0263B72D000BB8BAA /* CountdownViewModel.swift */; };
 		27D75752263BF8CD00698900 /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D75751263BF8CD00698900 /* UserDefaults+Extensions.swift */; };
+		27EED3C52665EEF4003FC5A7 /* textFieldTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EED3C42665EEF4003FC5A7 /* textFieldTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +130,7 @@
 		27D57CFF263D39DB00C92460 /* CircleProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgressView.swift; sourceTree = "<group>"; };
 		27D57D02263D3C4200C92460 /* ElapsedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElapsedView.swift; sourceTree = "<group>"; };
 		27D75751263BF8CD00698900 /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
+		27EED3C42665EEF4003FC5A7 /* textFieldTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textFieldTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -270,6 +272,7 @@
 				27A805542646D6F200832260 /* AboutView.swift */,
 				27A805562646D79500832260 /* AboutDetailView */,
 				27C5420E2647C09A00EEF40B /* PopupTextView.swift */,
+				27EED3C42665EEF4003FC5A7 /* textFieldTest.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 				27D75752263BF8CD00698900 /* UserDefaults+Extensions.swift in Sources */,
 				27B7E225263D421600E3CE71 /* LeftDaysView.swift in Sources */,
 				27B6703426449E880058B31C /* DataModel.swift in Sources */,
+				27EED3C52665EEF4003FC5A7 /* textFieldTest.swift in Sources */,
 				27A8055A2646D7F000832260 /* AboutLevelView.swift in Sources */,
 				27A9DEB5263CF858005480AA /* CountdownProgressView.swift in Sources */,
 				27B15178265E6216000F696B /* OnBoardCellView.swift in Sources */,
@@ -589,7 +593,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Countdown/Countdown.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_ASSET_PATHS = "\"Countdown/Preview Content\"";
 				DEVELOPMENT_TEAM = L43KX6QVVV;
 				ENABLE_PREVIEWS = YES;
@@ -614,7 +618,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Countdown/Countdown.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_ASSET_PATHS = "\"Countdown/Preview Content\"";
 				DEVELOPMENT_TEAM = L43KX6QVVV;
 				ENABLE_PREVIEWS = YES;
@@ -638,7 +642,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = CountdownWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = L43KX6QVVV;
 				INFOPLIST_FILE = CountdownWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -661,7 +665,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = CountdownWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = L43KX6QVVV;
 				INFOPLIST_FILE = CountdownWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
