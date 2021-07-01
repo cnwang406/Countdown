@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var countdownVM = CountdownViewModel()
+    
+    
     var body: some View {
-        Text("Hello, World!")
+        Text(countdownVM.leftUnit)
             .padding()
     }
 }
