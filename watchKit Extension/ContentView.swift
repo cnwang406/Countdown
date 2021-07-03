@@ -12,8 +12,18 @@ struct ContentView: View {
     
     
     var body: some View {
+        VStack{
+            HStack {
+                Image("tesla.red")
+                    .resizable()
+                    .scaleEffect()
+                    .frame(width:30, height:30)
+                Text("t:\(countdownVM.title)")
+            }
+            
         Text(countdownVM.leftUnit)
             .padding()
+        }
     }
 }
 
