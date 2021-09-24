@@ -15,9 +15,15 @@ struct OnBoardScreen: View {
     //MARK: - BODY
     var body: some View {
         VStack{
-        Text("WELCOME")
-            .font(.title)
-            .fontWeight(.bold)
+            HStack(alignment:.bottom){
+                Text("WELCOME")
+                    .font(.title)
+                    .fontWeight(.bold)
+                Text("Ver.\(UIApplication.appVersion!)b\(UIApplication.appBuildVersion!)")
+                    .font(.subheadline)
+                    .opacity(0.8)
+                    
+            }
         OnBoardCellView()
             .padding(.vertical,10)
             GeometryReader{geometry in
